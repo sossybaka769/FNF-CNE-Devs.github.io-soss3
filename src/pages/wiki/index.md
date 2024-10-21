@@ -45,6 +45,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
 Credits:
 - Ne_Eo - some styling and basically making the entire structure of the website.
 - Frakits - useless documentation and tons of styling.
+- Nex_isDumb - other documentations, keeping the api up to date (mostly) plus few other stuff.
 - swordcube - helping hand for documentation.
 - Care or usb_port_2 - helped with keeping my sanity.
 

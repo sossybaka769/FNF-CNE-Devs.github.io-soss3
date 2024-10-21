@@ -114,15 +114,15 @@
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":keep"/></meta>
 		</refreshAssets>
-		<initTransition public="1" set="method" line="177" static="1">
+		<initTransition public="1" set="method" line="179" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":keep"/></meta>
 		</initTransition>
-		<onStateSwitch set="method" line="188" static="1">
+		<onStateSwitch set="method" line="190" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":keep"/></meta>
 		</onStateSwitch>
-		<onStateSwitchPost set="method" line="192" static="1">
+		<onStateSwitchPost set="method" line="194" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":keep"/></meta>
 		</onStateSwitchPost>
@@ -176,7 +176,7 @@
 	<c path="openfl.geom.ColorTransform"/>
 	<x path="Void"/>
 </f></drawLimb>
-		<limbOnScreen set="method" line="83" override="1"><f a="limb:m:?Camera">
+		<limbOnScreen set="method" line="86" override="1"><f a="limb:m:?Camera">
 	<c path="flixel.graphics.frames.FlxFrame"/>
 	<c path="flixel.math.FlxMatrix"/>
 	<c path="flixel.FlxCamera"/>
@@ -195,7 +195,7 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="funkin.backend._FunkinSprite.XMLAnimType_Impl_" params="" file="source/funkin/backend/FunkinSprite.hx" private="1" module="funkin.backend.FunkinSprite" final="1">
-	<NONE public="1" get="inline" set="null" expr="cast 0" line="18" static="1">
+	<NONE public="1" get="inline" set="null" expr="cast 0" line="21" static="1">
 		<x path="funkin.backend.XMLAnimType"/>
 		<meta>
 			<m n=":value"><e>cast 0</e></m>
@@ -203,7 +203,7 @@
 			<m n=":enum"/>
 		</meta>
 	</NONE>
-	<BEAT public="1" get="inline" set="null" expr="cast 1" line="19" static="1">
+	<BEAT public="1" get="inline" set="null" expr="cast 1" line="22" static="1">
 		<x path="funkin.backend.XMLAnimType"/>
 		<meta>
 			<m n=":value"><e>cast 1</e></m>
@@ -211,7 +211,7 @@
 			<m n=":enum"/>
 		</meta>
 	</BEAT>
-	<LOOP public="1" get="inline" set="null" expr="cast 2" line="20" static="1">
+	<LOOP public="1" get="inline" set="null" expr="cast 2" line="23" static="1">
 		<x path="funkin.backend.XMLAnimType"/>
 		<meta>
 			<m n=":value"><e>cast 2</e></m>
@@ -219,7 +219,7 @@
 			<m n=":enum"/>
 		</meta>
 	</LOOP>
-	<fromString public="1" set="method" line="23" static="1">
+	<fromString public="1" set="method" line="26" static="1">
 		<f a="str:?def" v=":NONE">
 			<c path="String"/>
 			<x path="funkin.backend.XMLAnimType"/>
@@ -234,7 +234,7 @@
 </class></impl>
 	</abstract>
 	<class path="funkin.backend._FunkinSprite.XMLAnimType_Impl_" params="" file="source/funkin/backend/FunkinSprite.hx" private="1" module="funkin.backend.FunkinSprite" final="1">
-		<NONE public="1" get="inline" set="null" expr="cast 0" line="18" static="1">
+		<NONE public="1" get="inline" set="null" expr="cast 0" line="21" static="1">
 			<x path="funkin.backend.XMLAnimType"/>
 			<meta>
 				<m n=":value"><e>cast 0</e></m>
@@ -242,7 +242,7 @@
 				<m n=":enum"/>
 			</meta>
 		</NONE>
-		<BEAT public="1" get="inline" set="null" expr="cast 1" line="19" static="1">
+		<BEAT public="1" get="inline" set="null" expr="cast 1" line="22" static="1">
 			<x path="funkin.backend.XMLAnimType"/>
 			<meta>
 				<m n=":value"><e>cast 1</e></m>
@@ -250,7 +250,7 @@
 				<m n=":enum"/>
 			</meta>
 		</BEAT>
-		<LOOP public="1" get="inline" set="null" expr="cast 2" line="20" static="1">
+		<LOOP public="1" get="inline" set="null" expr="cast 2" line="23" static="1">
 			<x path="funkin.backend.XMLAnimType"/>
 			<meta>
 				<m n=":value"><e>cast 2</e></m>
@@ -258,7 +258,7 @@
 				<m n=":enum"/>
 			</meta>
 		</LOOP>
-		<fromString public="1" set="method" line="23" static="1">
+		<fromString public="1" set="method" line="26" static="1">
 			<f a="str:?def" v=":NONE">
 				<c path="String"/>
 				<x path="funkin.backend.XMLAnimType"/>
@@ -311,15 +311,15 @@
 		<implements path="funkin.backend.utils.IXMLEvents"/>
 		<implements path="funkin.backend.system.interfaces.IOffsetCompatible"/>
 		<implements path="funkin.backend.system.interfaces.IBeatReceiver"/>
-		<copyFrom public="1" set="method" line="73" static="1"><f a="source">
+		<copyFrom public="1" set="method" line="76" static="1"><f a="source">
 	<c path="funkin.backend.FunkinSprite"/>
 	<c path="funkin.backend.FunkinSprite"/>
 </f></copyFrom>
-		<__oldScrollFactor expr="new FlxPoint()" line="253" static="1">
+		<__oldScrollFactor expr="new FlxPoint()" line="256" static="1">
 			<x path="flixel.math.FlxPoint"/>
 			<meta><m n=":value"><e>new FlxPoint()</e></m></meta>
 		</__oldScrollFactor>
-		<__oldScale expr="new FlxPoint()" line="254" static="1">
+		<__oldScale expr="new FlxPoint()" line="257" static="1">
 			<x path="flixel.math.FlxPoint"/>
 			<meta><m n=":value"><e>new FlxPoint()</e></m></meta>
 		</__oldScale>
@@ -380,11 +380,11 @@
 			<c path="String"/>
 			<meta><m n=":noCompletion"/></meta>
 		</atlasPath>
-		<update public="1" set="method" line="95" override="1"><f a="elapsed">
+		<update public="1" set="method" line="98" override="1"><f a="elapsed">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></update>
-		<loadSprite public="1" set="method" line="109">
+		<loadSprite public="1" set="method" line="112">
 			<f a="path:?Unique:?Key" v=":false:null">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -393,7 +393,7 @@
 			</f>
 			<meta><m n=":value"><e>{ Key : null, Unique : false }</e></m></meta>
 		</loadSprite>
-		<onPropertySet public="1" set="method" line="122"><f a="property:value">
+		<onPropertySet public="1" set="method" line="125"><f a="property:value">
 	<c path="String"/>
 	<d/>
 	<x path="Void"/>
@@ -402,50 +402,50 @@
 			<x path="Int"/>
 			<meta><m n=":value"><e>0</e></m></meta>
 		</countedBeat>
-		<beatHit public="1" set="method" line="129"><f a="curBeat">
+		<beatHit public="1" set="method" line="132"><f a="curBeat">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></beatHit>
-		<stepHit public="1" set="method" line="141"><f a="curBeat">
+		<stepHit public="1" set="method" line="144"><f a="curBeat">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stepHit>
-		<measureHit public="1" set="method" line="145"><f a="curMeasure">
+		<measureHit public="1" set="method" line="148"><f a="curMeasure">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></measureHit>
-		<getScreenBounds public="1" set="method" line="149" override="1"><f a="?newRect:?camera">
+		<getScreenBounds public="1" set="method" line="152" override="1"><f a="?newRect:?camera">
 	<c path="flixel.math.FlxRect"/>
 	<c path="flixel.FlxCamera"/>
 	<c path="flixel.math.FlxRect"/>
 </f></getScreenBounds>
-		<drawComplex public="1" set="method" line="157" override="1"><f a="camera">
+		<drawComplex public="1" set="method" line="160" override="1"><f a="camera">
 	<c path="flixel.FlxCamera"/>
 	<x path="Void"/>
 </f></drawComplex>
-		<doAdditionalMatrixStuff public="1" set="method" line="162" override="1"><f a="matrix:camera">
+		<doAdditionalMatrixStuff public="1" set="method" line="165" override="1"><f a="matrix:camera">
 	<c path="flixel.math.FlxMatrix"/>
 	<c path="flixel.FlxCamera"/>
 	<x path="Void"/>
 </f></doAdditionalMatrixStuff>
-		<getScreenPosition public="1" set="method" line="173" override="1"><f a="?point:?Camera">
+		<getScreenPosition public="1" set="method" line="176" override="1"><f a="?point:?Camera">
 	<x path="flixel.math.FlxPoint"/>
 	<c path="flixel.FlxCamera"/>
 	<x path="flixel.math.FlxPoint"/>
 </f></getScreenPosition>
-		<draw public="1" set="method" line="194" override="1"><f a=""><x path="Void"/></f></draw>
-		<copyAtlasValues public="1" set="method" line="207"><f a=""><x path="Void"/></f></copyAtlasValues>
-		<destroy public="1" set="method" line="232" override="1"><f a=""><x path="Void"/></f></destroy>
-		<__shouldDoScaleProcedure get="inline" set="null" line="251"><f a=""><x path="Bool"/></f></__shouldDoScaleProcedure>
+		<draw public="1" set="method" line="197" override="1"><f a=""><x path="Void"/></f></draw>
+		<copyAtlasValues public="1" set="method" line="210"><f a=""><x path="Void"/></f></copyAtlasValues>
+		<destroy public="1" set="method" line="235" override="1"><f a=""><x path="Void"/></f></destroy>
+		<__shouldDoScaleProcedure get="inline" set="null" line="254"><f a=""><x path="Bool"/></f></__shouldDoScaleProcedure>
 		<__skipZoomProcedure expr="false">
 			<x path="Bool"/>
 			<meta><m n=":value"><e>false</e></m></meta>
 		</__skipZoomProcedure>
-		<__doPreZoomScaleProcedure set="method" line="258"><f a="camera">
+		<__doPreZoomScaleProcedure set="method" line="261"><f a="camera">
 	<c path="flixel.FlxCamera"/>
 	<x path="Void"/>
 </f></__doPreZoomScaleProcedure>
-		<__doPostZoomScaleProcedure set="method" line="269"><f a=""><x path="Void"/></f></__doPostZoomScaleProcedure>
+		<__doPostZoomScaleProcedure set="method" line="272"><f a=""><x path="Void"/></f></__doPostZoomScaleProcedure>
 		<animOffsets public="1" expr="new Map&lt;String,FlxPoint&gt;()">
 			<t path="Map">
 				<c path="String"/>
@@ -453,7 +453,7 @@
 			</t>
 			<meta><m n=":value"><e>new Map&lt;String,FlxPoint&gt;()</e></m></meta>
 		</animOffsets>
-		<addOffset public="1" set="method" line="281">
+		<addOffset public="1" set="method" line="284">
 			<f a="name:?x:?y" v=":0:0">
 				<c path="String"/>
 				<x path="Float"/>
@@ -462,7 +462,7 @@
 			</f>
 			<meta><m n=":value"><e>{ y : 0, x : 0 }</e></m></meta>
 		</addOffset>
-		<switchOffset public="1" set="method" line="286"><f a="anim1:anim2">
+		<switchOffset public="1" set="method" line="289"><f a="anim1:anim2">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
@@ -471,7 +471,7 @@
 			<x path="funkin.backend.scripting.events.PlayAnimContext"/>
 			<meta><m n=":value"><e>DANCE</e></m></meta>
 		</lastAnimContext>
-		<playAnim public="1" set="method" line="298">
+		<playAnim public="1" set="method" line="301">
 			<f a="AnimName:?Force:?Context:?Reversed:?Frame" v="::NONE:false:0">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -482,31 +482,39 @@
 			</f>
 			<meta><m n=":value"><e>{ Frame : 0, Reversed : false, Context : NONE }</e></m></meta>
 		</playAnim>
-		<getAnimOffset public="1" get="inline" set="null" line="329"><f a="name">
+		<getAnim public="1" set="method" line="331"><f a="name">
+	<c path="String"/>
+	<x path="flixel.util.typeLimit.OneOfTwo">
+		<c path="flixel.animation.FlxAnimation"/>
+		<c path="flxanimate.animate.FlxSymbolAnimation"/>
+	</x>
+</f></getAnim>
+		<getAnimOffset public="1" get="inline" set="null" line="338"><f a="name">
 	<c path="String"/>
 	<x path="Null"><x path="flixel.math.FlxPoint"/></x>
 </f></getAnimOffset>
-		<hasAnimation public="1" get="inline" set="null" line="335"><f a="AnimName">
+		<hasAnimation public="1" get="inline" set="null" line="344"><f a="AnimName">
 	<c path="String"/>
 	<x path="Bool"/>
 </f></hasAnimation>
-		<getAnimName public="1" get="inline" set="null" line="340"><f a=""><c path="String"/></f></getAnimName>
-		<isAnimReversed public="1" get="inline" set="null" line="354"><f a=""><x path="Bool"/></f></isAnimReversed>
-		<removeAnimation public="1" get="inline" set="null" line="358"><f a="name">
+		<getAnimName public="1" get="inline" set="null" line="349"><f a=""><c path="String"/></f></getAnimName>
+		<isAnimReversed public="1" get="inline" set="null" line="363"><f a=""><x path="Bool"/></f></isAnimReversed>
+		<removeAnimation public="1" get="inline" set="null" line="367"><f a="name">
 	<c path="String"/>
 	<x path="Void"/>
 </f></removeAnimation>
-		<getNameList public="1" get="inline" set="null" line="365"><f a=""><c path="Array"><c path="String"/></c></f></getNameList>
-		<stopAnimation public="1" get="inline" set="null" line="372"><f a=""><x path="Void"/></f></stopAnimation>
-		<isAnimFinished public="1" get="inline" set="null" line="380"><f a=""><x path="Bool"/></f></isAnimFinished>
-		<set_beatInterval set="method" line="387">
+		<getNameList public="1" get="inline" set="null" line="374"><f a=""><c path="Array"><c path="String"/></c></f></getNameList>
+		<stopAnimation public="1" get="inline" set="null" line="381"><f a=""><x path="Void"/></f></stopAnimation>
+		<isAnimFinished public="1" get="inline" set="null" line="389"><f a=""><x path="Bool"/></f></isAnimFinished>
+		<isAnimAtEnd public="1" get="inline" set="null" line="393"><f a=""><x path="Bool"/></f></isAnimAtEnd>
+		<set_beatInterval set="method" line="400">
 			<f a="v">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_beatInterval>
-		<new public="1" set="method" line="57">
+		<new public="1" set="method" line="60">
 			<f a="?X:?Y:?SimpleGraphic" v="0:0:">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -1527,7 +1535,7 @@
 			</f>
 			<meta><m n=":value"><e>{ isAssetsPath : false }</e></m></meta>
 		</script>
-		<chart public="1" set="method" line="119" static="1">
+		<chart public="1" set="method" line="120" static="1">
 			<f a="song:?difficulty" v=":&quot;normal&quot;">
 				<c path="String"/>
 				<c path="String"/>
@@ -1535,63 +1543,71 @@
 			</f>
 			<meta><m n=":value"><e>{ difficulty : "normal" }</e></m></meta>
 		</chart>
-		<character public="1" set="method" line="126" static="1"><f a="character">
+		<character public="1" get="inline" set="null" line="128" static="1"><f a="character">
 	<c path="String"/>
 	<c path="String"/>
 </f></character>
-		<font public="1" get="inline" set="null" line="131" static="1"><f a="key">
+		<getFontName public="1" get="inline" set="null" line="137" static="1">
+			<f a="font">
+				<c path="String"/>
+				<c path="String"/>
+			</f>
+			<haxe_doc>* Gets the name of a registered font.
+	 * @param font The font's path (if it's already passed as a font name, the same name will be returned)</haxe_doc>
+		</getFontName>
+		<font public="1" get="inline" set="null" line="142" static="1"><f a="key">
 	<c path="String"/>
 	<c path="String"/>
 </f></font>
-		<obj public="1" get="inline" set="null" line="135" static="1"><f a="key">
+		<obj public="1" get="inline" set="null" line="146" static="1"><f a="key">
 	<c path="String"/>
 	<c path="String"/>
 </f></obj>
-		<dae public="1" get="inline" set="null" line="139" static="1"><f a="key">
+		<dae public="1" get="inline" set="null" line="150" static="1"><f a="key">
 	<c path="String"/>
 	<c path="String"/>
 </f></dae>
-		<md2 public="1" get="inline" set="null" line="143" static="1"><f a="key">
+		<md2 public="1" get="inline" set="null" line="154" static="1"><f a="key">
 	<c path="String"/>
 	<c path="String"/>
 </f></md2>
-		<md5 public="1" get="inline" set="null" line="147" static="1"><f a="key">
+		<md5 public="1" get="inline" set="null" line="158" static="1"><f a="key">
 	<c path="String"/>
 	<c path="String"/>
 </f></md5>
-		<awd public="1" get="inline" set="null" line="151" static="1"><f a="key">
+		<awd public="1" get="inline" set="null" line="162" static="1"><f a="key">
 	<c path="String"/>
 	<c path="String"/>
 </f></awd>
-		<getSparrowAtlas public="1" get="inline" set="null" line="156" static="1"><f a="key:?library">
+		<getSparrowAtlas public="1" get="inline" set="null" line="167" static="1"><f a="key:?library">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="flixel.graphics.frames.FlxAtlasFrames"/>
 </f></getSparrowAtlas>
-		<getSparrowAtlasAlt public="1" get="inline" set="null" line="159" static="1"><f a="key">
+		<getSparrowAtlasAlt public="1" get="inline" set="null" line="170" static="1"><f a="key">
 	<c path="String"/>
 	<c path="flixel.graphics.frames.FlxAtlasFrames"/>
 </f></getSparrowAtlasAlt>
-		<getPackerAtlas public="1" get="inline" set="null" line="162" static="1"><f a="key:?library">
+		<getPackerAtlas public="1" get="inline" set="null" line="173" static="1"><f a="key:?library">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="flixel.graphics.frames.FlxAtlasFrames"/>
 </f></getPackerAtlas>
-		<getPackerAtlasAlt public="1" get="inline" set="null" line="165" static="1"><f a="key">
+		<getPackerAtlasAlt public="1" get="inline" set="null" line="176" static="1"><f a="key">
 	<c path="String"/>
 	<c path="flixel.graphics.frames.FlxAtlasFrames"/>
 </f></getPackerAtlasAlt>
-		<getAsepriteAtlas public="1" get="inline" set="null" line="168" static="1"><f a="key:?library">
+		<getAsepriteAtlas public="1" get="inline" set="null" line="179" static="1"><f a="key:?library">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="flixel.graphics.frames.FlxAtlasFrames"/>
 </f></getAsepriteAtlas>
-		<getAsepriteAtlasAlt public="1" get="inline" set="null" line="171" static="1"><f a="key">
+		<getAsepriteAtlasAlt public="1" get="inline" set="null" line="182" static="1"><f a="key">
 	<c path="String"/>
 	<c path="flixel.graphics.frames.FlxAtlasFrames"/>
 </f></getAsepriteAtlasAlt>
-		<getAssetsRoot public="1" get="inline" set="null" line="174" static="1"><f a=""><c path="String"/></f></getAssetsRoot>
-		<getFrames public="1" set="method" line="181" static="1">
+		<getAssetsRoot public="1" get="inline" set="null" line="185" static="1"><f a=""><c path="String"/></f></getAssetsRoot>
+		<getFrames public="1" set="method" line="192" static="1">
 			<f a="key:?assetsPath:?library" v=":false:">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -1603,7 +1619,7 @@
 	 * @param key Path to the frames
 	 * @param library (Additional) library to load the frames from.</haxe_doc>
 		</getFrames>
-		<loadFrames set="method" line="201" static="1">
+		<loadFrames set="method" line="212" static="1">
 			<f a="path:?Unique:?Key:?SkipAtlasCheck" v=":false:null:false">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -1619,7 +1635,7 @@
 	 * @param SkipAtlasCheck Whenever the atlas check should be skipped.
 	 * @return FlxFramesCollection Frames</haxe_doc>
 		</loadFrames>
-		<getFolderDirectories public="1" set="method" line="234" static="1">
+		<getFolderDirectories public="1" set="method" line="245" static="1">
 			<f a="key:?addPath:?source" v=":false:BOTH">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -1628,7 +1644,7 @@
 			</f>
 			<meta><m n=":value"><e>{ source : BOTH, addPath : false }</e></m></meta>
 		</getFolderDirectories>
-		<getFolderContent public="1" set="method" line="243" static="1">
+		<getFolderContent public="1" set="method" line="254" static="1">
 			<f a="key:?addPath:?source" v=":false:BOTH">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -1637,14 +1653,14 @@
 			</f>
 			<meta><m n=":value"><e>{ source : BOTH, addPath : false }</e></m></meta>
 		</getFolderContent>
-		<getFilenameFromLibFile public="1" set="method" line="307" static="1">
+		<getFilenameFromLibFile public="1" set="method" line="318" static="1">
 			<f a="path">
 				<c path="String"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</getFilenameFromLibFile>
-		<getLibFromLibFile public="1" set="method" line="315" static="1">
+		<getLibFromLibFile public="1" set="method" line="326" static="1">
 			<f a="path">
 				<c path="String"/>
 				<c path="String"/>
@@ -1656,7 +1672,7 @@
 	<class path="funkin.backend.assets.ScriptPathInfo" params="" file="source/funkin/backend/assets/Paths.hx" module="funkin.backend.assets.Paths">
 		<file public="1"><c path="String"/></file>
 		<library public="1"><c path="lime.utils.AssetLibrary"/></library>
-		<new public="1" set="method" line="328"><f a="file:library">
+		<new public="1" set="method" line="339"><f a="file:library">
 	<c path="String"/>
 	<c path="lime.utils.AssetLibrary"/>
 	<x path="Void"/>
@@ -2388,7 +2404,7 @@
 				<d/>
 				<x path="Void"/>
 			</f>
-			<haxe_doc>* Gets the variable `variable` from the script's variables.
+			<haxe_doc>* Sets the variable `variable` from the script's variables.
 	 * @param variable Name of the variable.
 	 * @return Variable (or null if it doesn't exists)</haxe_doc>
 		</set>
@@ -2884,6 +2900,55 @@
 	<c path="funkin.game.StrumLine"/>
 	<x path="Int"/>
 	<c path="funkin.backend.scripting.events.CamMoveEvent"/>
+</f></recycle>
+		<new public="1" set="method" line="6"><f a=""><x path="Void"/></f></new>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":build"><e>funkin.backend.system.macros.EventMacro.build()</e></m>
+			<m n=":autoBuild"><e>funkin.backend.system.macros.EventMacro.build()</e></m>
+		</meta>
+	</class>
+	<class path="funkin.backend.scripting.events.CharacterNodeEvent" params="" file="source/funkin/backend/scripting/events/CharacterNodeEvent.hx" final="1">
+		<extends path="funkin.backend.scripting.events.CancellableEvent"/>
+		<character public="1">
+			<c path="funkin.game.Character"/>
+			<haxe_doc>* The character instance</haxe_doc>
+		</character>
+		<node public="1">
+			<x path="haxe.xml.Access"/>
+			<haxe_doc>* The node which is currently being parsed</haxe_doc>
+		</node>
+		<name public="1">
+			<c path="String"/>
+			<haxe_doc>* The name of the node, quicker access than e.node.name</haxe_doc>
+		</name>
+		<recycle public="1" set="method" line="6"><f a="character:node:name">
+	<c path="funkin.game.Character"/>
+	<x path="haxe.xml.Access"/>
+	<c path="String"/>
+	<c path="funkin.backend.scripting.events.CharacterNodeEvent"/>
+</f></recycle>
+		<new public="1" set="method" line="6"><f a=""><x path="Void"/></f></new>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":build"><e>funkin.backend.system.macros.EventMacro.build()</e></m>
+			<m n=":autoBuild"><e>funkin.backend.system.macros.EventMacro.build()</e></m>
+		</meta>
+	</class>
+	<class path="funkin.backend.scripting.events.CharacterXMLEvent" params="" file="source/funkin/backend/scripting/events/CharacterXMLEvent.hx" final="1">
+		<extends path="funkin.backend.scripting.events.CancellableEvent"/>
+		<character public="1">
+			<c path="funkin.game.Character"/>
+			<haxe_doc>* The character instance</haxe_doc>
+		</character>
+		<xml public="1">
+			<x path="haxe.xml.Access"/>
+			<haxe_doc>* The xml</haxe_doc>
+		</xml>
+		<recycle public="1" set="method" line="6"><f a="character:xml">
+	<c path="funkin.game.Character"/>
+	<x path="haxe.xml.Access"/>
+	<c path="funkin.backend.scripting.events.CharacterXMLEvent"/>
 </f></recycle>
 		<new public="1" set="method" line="6"><f a=""><x path="Void"/></f></new>
 		<meta>
@@ -7000,12 +7065,13 @@
 			<m n=":dox"><e>hide</e></m>
 		</meta>
 	</class>
-	<typedef path="funkin.backend.system.modules.PlayingSound" params="" file="source/funkin/backend/system/modules/AudioSwitchFix.hx" module="funkin.backend.system.modules.AudioSwitchFix"><a>
-		<time><x path="Float"/></time>
-		<sound><c path="flixel.sound.FlxSound"/></sound>
-	</a><meta>
-	<m n=":dox"><e>hide</e></m>
-</meta></typedef>
+	<typedef path="funkin.backend.system.modules.PlayingSound" params="" file="source/funkin/backend/system/modules/AudioSwitchFix.hx" module="funkin.backend.system.modules.AudioSwitchFix">
+		<a>
+			<time><x path="Float"/></time>
+			<sound><c path="flixel.sound.FlxSound"/></sound>
+		</a>
+		<meta><m n=":dox"><e>hide</e></m></meta>
+	</typedef>
 	<class path="funkin.backend.system.modules.CrashHandler" params="" file="source/funkin/backend/system/modules/CrashHandler.hx">
 		<init public="1" set="method" line="13" static="1">
 			<f a=""><x path="Void"/></f>
@@ -9575,7 +9641,7 @@
 	<format><d/></format>
 </a></typedef>
 	<class path="funkin.backend.utils.XMLUtil" params="" file="source/funkin/backend/utils/XMLUtil.hx">
-		<applyXMLProperty public="1" set="method" line="26" static="1">
+		<applyXMLProperty public="1" set="method" line="29" static="1">
 			<f a="object:property">
 				<d/>
 				<x path="haxe.xml.Access"/>
@@ -9585,7 +9651,7 @@
 	 * @param object Object to which the xml property will be applied
 	 * @param property `property` node.</haxe_doc>
 		</applyXMLProperty>
-		<loadSpriteFromXML public="1" set="method" line="70" static="1">
+		<loadSpriteFromXML public="1" set="method" line="73" static="1">
 			<f a="spr:node:?parentFolder:?defaultAnimType" v="::&quot;&quot;:BEAT">
 				<c path="funkin.backend.FunkinSprite"/>
 				<x path="haxe.xml.Access"/>
@@ -9596,7 +9662,7 @@
 			<meta><m n=":value"><e>{ defaultAnimType : BEAT, parentFolder : "" }</e></m></meta>
 			<haxe_doc>* Overrides a sprite based on a XML node.</haxe_doc>
 		</loadSpriteFromXML>
-		<createSpriteFromXML public="1" get="inline" set="null" line="185" static="1">
+		<createSpriteFromXML public="1" get="inline" set="null" line="188" static="1">
 			<f a="node:?parentFolder:?defaultAnimType:?cl:?args" v=":&quot;&quot;:BEAT::">
 				<x path="haxe.xml.Access"/>
 				<c path="String"/>
@@ -9608,7 +9674,7 @@
 			<meta><m n=":value"><e>{ defaultAnimType : BEAT, parentFolder : "" }</e></m></meta>
 			<haxe_doc>* Creates a new sprite based on a XML node.</haxe_doc>
 		</createSpriteFromXML>
-		<extractAnimFromXML public="1" set="method" line="191" static="1">
+		<extractAnimFromXML public="1" set="method" line="194" static="1">
 			<f a="anim:?animType:?loop" v=":NONE:false">
 				<x path="haxe.xml.Access"/>
 				<x path="funkin.backend.XMLAnimType"/>
@@ -9617,7 +9683,7 @@
 			</f>
 			<meta><m n=":value"><e>{ loop : false, animType : NONE }</e></m></meta>
 		</extractAnimFromXML>
-		<addXMLAnimation public="1" set="method" line="220" static="1">
+		<addXMLAnimation public="1" set="method" line="223" static="1">
 			<f a="sprite:anim:?loop" v="::false">
 				<c path="flixel.FlxSprite"/>
 				<x path="haxe.xml.Access"/>
@@ -9629,28 +9695,28 @@
 	 * @param sprite Destination sprite
 	 * @param anim Animation (Must be a `anim` XML node)</haxe_doc>
 		</addXMLAnimation>
-		<addAnimToSprite public="1" set="method" line="229" static="1"><f a="sprite:animData">
+		<addAnimToSprite public="1" set="method" line="232" static="1"><f a="sprite:animData">
 	<c path="flixel.FlxSprite"/>
 	<t path="funkin.backend.utils.AnimData"/>
 	<x path="funkin.backend.system.ErrorCode"/>
 </f></addAnimToSprite>
-		<defaultForcedCheck public="1" get="inline" set="null" line="276" static="1"><f a="animName:sprite">
+		<defaultForcedCheck public="1" get="inline" set="null" line="279" static="1"><f a="animName:sprite">
 	<c path="String"/>
 	<c path="funkin.backend.FunkinSprite"/>
 	<x path="Bool"/>
 </f></defaultForcedCheck>
-		<fixXMLText public="1" get="inline" set="null" line="278" static="1"><f a="text">
+		<fixXMLText public="1" get="inline" set="null" line="281" static="1"><f a="text">
 	<c path="String"/>
 	<c path="String"/>
 </f></fixXMLText>
-		<fixSpacingInNode public="1" set="method" line="286" static="1">
+		<fixSpacingInNode public="1" set="method" line="289" static="1">
 			<f a="node">
 				<x path="haxe.xml.Access"/>
 				<x path="haxe.xml.Access"/>
 			</f>
 			<haxe_doc>* WARNING: will edit directly the node!</haxe_doc>
 		</fixSpacingInNode>
-		<getTextFormats public="1" set="method" line="301" static="1">
+		<getTextFormats public="1" set="method" line="304" static="1">
 			<f a="_node:?currentFormat:?parsedSegments" v=":null:null">
 				<x path="flixel.util.typeLimit.OneOfTwo">
 					<c path="Xml"/>
@@ -9663,6 +9729,48 @@
 			<meta><m n=":value"><e>{ parsedSegments : null, currentFormat : null }</e></m></meta>
 		</getTextFormats>
 		<haxe_doc>* Class made to make XML parsing easier.</haxe_doc>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<class path="funkin.backend.utils.XMLImportedScriptInfo" params="" file="source/funkin/backend/utils/XMLUtil.hx" module="funkin.backend.utils.XMLUtil">
+		<prepareInfos public="1" set="method" line="347" static="1"><f a="node:parentScriptPack:?onScriptPreLoad">
+	<x path="haxe.xml.Access"/>
+	<c path="funkin.backend.scripting.ScriptPack"/>
+	<f a="">
+		<c path="funkin.backend.utils.XMLImportedScriptInfo"/>
+		<x path="Void"/>
+	</f>
+	<c path="funkin.backend.utils.XMLImportedScriptInfo"/>
+</f></prepareInfos>
+		<shouldLoadBefore public="1" get="inline" set="null" line="374" static="1">
+			<f a="node">
+				<x path="haxe.xml.Access"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":dox"><e>hide</e></m></meta>
+		</shouldLoadBefore>
+		<path public="1"><c path="String"/></path>
+		<shortLived public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</shortLived>
+		<loadBefore public="1" expr="true">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>true</e></m></meta>
+		</loadBefore>
+		<importStageSprites public="1" expr="false">
+			<x path="Bool"/>
+			<meta><m n=":value"><e>false</e></m></meta>
+		</importStageSprites>
+		<parentScriptPack public="1" expr="null">
+			<c path="funkin.backend.scripting.ScriptPack"/>
+			<meta><m n=":value"><e>null</e></m></meta>
+		</parentScriptPack>
+		<getScript public="1" set="method" line="345"><f a=""><c path="funkin.backend.scripting.Script"/></f></getScript>
+		<new public="1" set="method" line="339"><f a="path:parentScriptPack">
+	<c path="String"/>
+	<c path="funkin.backend.scripting.ScriptPack"/>
+	<x path="Void"/>
+</f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<typedef path="funkin.backend.utils.AnimData" params="" file="source/funkin/backend/utils/XMLUtil.hx" module="funkin.backend.utils.XMLUtil"><a>
@@ -13905,34 +14013,34 @@
 		<extends path="funkin.backend.FunkinSprite"/>
 		<implements path="funkin.backend.system.interfaces.IOffsetCompatible"/>
 		<implements path="funkin.backend.system.interfaces.IBeatReceiver"/>
-		<characterProperties public="1" expr="[&quot;x&quot;, &quot;y&quot;, &quot;sprite&quot;, &quot;scale&quot;, &quot;antialiasing&quot;, &quot;flipX&quot;, &quot;camx&quot;, &quot;camy&quot;, &quot;isPlayer&quot;, &quot;icon&quot;, &quot;color&quot;, &quot;gameOverChar&quot;, &quot;holdTime&quot;]" line="322" static="1">
+		<characterProperties public="1" expr="[&quot;x&quot;, &quot;y&quot;, &quot;sprite&quot;, &quot;scale&quot;, &quot;antialiasing&quot;, &quot;flipX&quot;, &quot;camx&quot;, &quot;camy&quot;, &quot;isPlayer&quot;, &quot;icon&quot;, &quot;color&quot;, &quot;gameOverChar&quot;, &quot;holdTime&quot;]" line="356" static="1">
 			<c path="Array"><c path="String"/></c>
 			<meta><m n=":value"><e>["x", "y", "sprite", "scale", "antialiasing", "flipX", "camx", "camy", "isPlayer", "icon", "color", "gameOverChar", "holdTime"]</e></m></meta>
 		</characterProperties>
-		<characterAnimProperties public="1" expr="[&quot;name&quot;, &quot;anim&quot;, &quot;x&quot;, &quot;y&quot;, &quot;fps&quot;, &quot;loop&quot;, &quot;indices&quot;]" line="327" static="1">
+		<characterAnimProperties public="1" expr="[&quot;name&quot;, &quot;anim&quot;, &quot;x&quot;, &quot;y&quot;, &quot;fps&quot;, &quot;loop&quot;, &quot;indices&quot;]" line="361" static="1">
 			<c path="Array"><c path="String"/></c>
 			<meta><m n=":value"><e>["name", "anim", "x", "y", "fps", "loop", "indices"]</e></m></meta>
 		</characterAnimProperties>
-		<FALLBACK_CHARACTER public="1" expr="&quot;bf&quot;" line="411" static="1">
+		<FALLBACK_CHARACTER public="1" expr="&quot;bf&quot;" line="462" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"bf"</e></m></meta>
 		</FALLBACK_CHARACTER>
-		<FALLBACK_DEAD_CHARACTER public="1" expr="&quot;bf-dead&quot;" line="412" static="1">
+		<FALLBACK_DEAD_CHARACTER public="1" expr="&quot;bf-dead&quot;" line="463" static="1">
 			<c path="String"/>
 			<meta><m n=":value"><e>"bf-dead"</e></m></meta>
 		</FALLBACK_DEAD_CHARACTER>
-		<getXMLFromCharName public="1" set="method" line="413" static="1"><f a="character">
+		<getXMLFromCharName public="1" set="method" line="464" static="1"><f a="character">
 	<x path="flixel.util.typeLimit.OneOfTwo">
 		<c path="String"/>
 		<c path="funkin.game.Character"/>
 	</x>
 	<x path="haxe.xml.Access"/>
 </f></getXMLFromCharName>
-		<getIconFromCharName public="1" set="method" line="448" static="1"><f a="?character">
+		<getIconFromCharName public="1" set="method" line="499" static="1"><f a="?character">
 	<c path="String"/>
 	<c path="String"/>
 </f></getIconFromCharName>
-		<getList public="1" set="method" line="459" static="1">
+		<getList public="1" set="method" line="510" static="1">
 			<f a="?mods" v="false">
 				<x path="Bool"/>
 				<c path="Array"><c path="String"/></c>
@@ -13983,8 +14091,17 @@
 			<x path="flixel.math.FlxPoint"/>
 			<meta><m n=":value"><e>FlxPoint.get(0, 0)</e></m></meta>
 		</globalOffset>
-		<script public="1"><c path="funkin.backend.scripting.Script"/></script>
 		<xml public="1"><x path="haxe.xml.Access"/></xml>
+		<scripts public="1"><c path="funkin.backend.scripting.ScriptPack"/></scripts>
+		<xmlImportedScripts public="1" expr="[]">
+			<c path="Array"><c path="funkin.backend.utils.XMLImportedScriptInfo"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</xmlImportedScripts>
+		<script public="1" set="accessor"><c path="funkin.backend.scripting.Script"/></script>
+		<prepareInfos public="1" set="method" line="56"><f a="node">
+	<x path="haxe.xml.Access"/>
+	<c path="funkin.backend.utils.XMLImportedScriptInfo"/>
+</f></prepareInfos>
 		<idleSuffix public="1" expr="&quot;&quot;">
 			<c path="String"/>
 			<meta><m n=":value"><e>""</e></m></meta>
@@ -14028,7 +14145,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</__autoInterval>
-		<fixChar public="1" set="method" line="89">
+		<fixChar public="1" set="method" line="96">
 			<f a="?switchAnims:?autoInterval" v="false:false">
 				<x path="Bool"/>
 				<x path="Bool"/>
@@ -14036,7 +14153,7 @@
 			</f>
 			<meta><m n=":value"><e>{ autoInterval : false, switchAnims : false }</e></m></meta>
 		</fixChar>
-		<swapLeftRightAnimations public="1" set="method" line="103"><f a=""><x path="Void"/></f></swapLeftRightAnimations>
+		<swapLeftRightAnimations public="1" set="method" line="110"><f a=""><x path="Void"/></f></swapLeftRightAnimations>
 		<__baseFlipped expr="false">
 			<x path="Bool"/>
 			<meta>
@@ -14051,7 +14168,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</isDanceLeftDanceRight>
-		<update public="1" set="method" line="116" override="1"><f a="elapsed">
+		<update public="1" set="method" line="123" override="1"><f a="elapsed">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></update>
@@ -14059,18 +14176,18 @@
 			<x path="Bool"/>
 			<meta><m n=":value"><e>false</e></m></meta>
 		</danced>
-		<dance public="1" set="method" line="133"><f a=""><x path="Void"/></f></dance>
-		<tryDance public="1" set="method" line="146"><f a=""><x path="Void"/></f></tryDance>
+		<dance public="1" set="method" line="140"><f a=""><x path="Void"/></f></dance>
+		<tryDance public="1" set="method" line="153"><f a=""><x path="Void"/></f></tryDance>
 		<danceOnBeat public="1" expr="true">
 			<x path="Bool"/>
 			<meta><m n=":value"><e>true</e></m></meta>
 			<haxe_doc>* Whenever the character should dance on beat or not. Set to false for `gf`, since the dance animation is automatically handled by PlayState.</haxe_doc>
 		</danceOnBeat>
-		<beatHit public="1" set="method" line="166" override="1"><f a="curBeat">
+		<beatHit public="1" set="method" line="173" override="1"><f a="curBeat">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></beatHit>
-		<stepHit public="1" set="method" line="174" override="1"><f a="curStep">
+		<stepHit public="1" set="method" line="181" override="1"><f a="curStep">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stepHit>
@@ -14081,22 +14198,22 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</__reverseDrawProcedure>
-		<getScreenBounds public="1" set="method" line="177" override="1"><f a="?newRect:?camera">
+		<getScreenBounds public="1" set="method" line="184" override="1"><f a="?newRect:?camera">
 	<c path="flixel.math.FlxRect"/>
 	<c path="flixel.FlxCamera"/>
 	<c path="flixel.math.FlxRect"/>
 </f></getScreenBounds>
-		<isOnScreen public="1" set="method" line="187" override="1"><f a="?camera">
+		<isOnScreen public="1" set="method" line="194" override="1"><f a="?camera">
 	<c path="flixel.FlxCamera"/>
 	<x path="Bool"/>
 </f></isOnScreen>
-		<isFlippedOffsets public="1" set="method" line="193"><f a=""><x path="Bool"/></f></isFlippedOffsets>
-		<draw public="1" set="method" line="195" override="1"><f a=""><x path="Void"/></f></draw>
+		<isFlippedOffsets public="1" set="method" line="200"><f a=""><x path="Bool"/></f></isFlippedOffsets>
+		<draw public="1" set="method" line="202" override="1"><f a=""><x path="Void"/></f></draw>
 		<singAnims public="1" expr="[&quot;singLEFT&quot;, &quot;singDOWN&quot;, &quot;singUP&quot;, &quot;singRIGHT&quot;]">
 			<c path="Array"><c path="String"/></c>
 			<meta><m n=":value"><e>["singLEFT", "singDOWN", "singUP", "singRIGHT"]</e></m></meta>
 		</singAnims>
-		<playSingAnim public="1" set="method" line="210">
+		<playSingAnim public="1" set="method" line="217">
 			<f a="direction:?suffix:?Context:?Force:?Reversed:?Frame" v=":&quot;&quot;:SING:null:false:0">
 				<x path="Int"/>
 				<c path="String"/>
@@ -14108,7 +14225,7 @@
 			</f>
 			<meta><m n=":value"><e>{ Frame : 0, Reversed : false, Force : null, Context : SING, suffix : "" }</e></m></meta>
 		</playSingAnim>
-		<playAnim public="1" set="method" line="217" override="1">
+		<playAnim public="1" set="method" line="224" override="1">
 			<f a="AnimName:?Force:?Context:?Reversed:?Frame" v="::NONE:false:0">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -14119,8 +14236,8 @@
 			</f>
 			<meta><m n=":value"><e>{ Frame : 0, Reversed : false, Context : NONE }</e></m></meta>
 		</playAnim>
-		<getCameraPosition public="1" get="inline" set="null" line="229"><f a=""><x path="flixel.math.FlxPoint"/></f></getCameraPosition>
-		<destroy public="1" set="method" line="240" override="1"><f a=""><x path="Void"/></f></destroy>
+		<getCameraPosition public="1" get="inline" set="null" line="236"><f a=""><x path="flixel.math.FlxPoint"/></f></getCameraPosition>
+		<destroy public="1" set="method" line="247" override="1"><f a=""><x path="Void"/></f></destroy>
 		<__reverseTrailProcedure expr="false">
 			<x path="Bool"/>
 			<meta>
@@ -14128,23 +14245,23 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</__reverseTrailProcedure>
-		<beforeTrailCache public="1" set="dynamic" line="253"><f a=""><x path="Void"/></f></beforeTrailCache>
-		<afterTrailCache public="1" set="dynamic" line="261"><f a=""><x path="Void"/></f></afterTrailCache>
-		<applyXML public="1" set="method" line="267"><f a="xml">
+		<beforeTrailCache public="1" set="dynamic" line="260"><f a=""><x path="Void"/></f></beforeTrailCache>
+		<afterTrailCache public="1" set="dynamic" line="268"><f a=""><x path="Void"/></f></afterTrailCache>
+		<applyXML public="1" set="method" line="274"><f a="xml">
 	<x path="haxe.xml.Access"/>
 	<x path="Void"/>
 </f></applyXML>
-		<buildCharacter public="1" get="inline" set="null" line="283"><f a="xml">
+		<buildCharacter public="1" get="inline" set="null" line="290"><f a="xml">
 	<x path="haxe.xml.Access"/>
 	<x path="Void"/>
 </f></buildCharacter>
-		<buildXML public="1" get="inline" set="null" line="331"><f a="?animsOrder">
+		<buildXML public="1" get="inline" set="null" line="365"><f a="?animsOrder">
 	<c path="Array"><c path="String"/></c>
 	<c path="Xml"/>
 </f></buildXML>
-		<getIcon public="1" get="inline" set="null" line="393"><f a=""><c path="String"/></f></getIcon>
-		<getAnimOrder public="1" set="method" line="396"><f a=""><c path="Array"><c path="String"/></c></f></getAnimOrder>
-		<set_stunned set="method" line="398">
+		<getIcon public="1" get="inline" set="null" line="427"><f a=""><c path="String"/></f></getIcon>
+		<getAnimOrder public="1" set="method" line="430"><f a=""><c path="Array"><c path="String"/></c></f></getAnimOrder>
+		<set_stunned set="method" line="432">
 			<f a="b">
 				<x path="Bool"/>
 				<x path="Bool"/>
@@ -14155,18 +14272,22 @@
 			<x path="Int"/>
 			<meta><m n=":noCompletion"/></meta>
 		</danceInterval>
-		<set_danceInterval set="method" line="406">
+		<set_danceInterval set="method" line="441">
 			<f a="v">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_danceInterval>
-		<get_danceInterval set="method" line="408">
+		<get_danceInterval set="method" line="443">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_danceInterval>
-		<new public="1" set="method" line="58">
+		<set_script set="method" line="445"><f a="script">
+	<c path="funkin.backend.scripting.Script"/>
+	<c path="funkin.backend.scripting.Script"/>
+</f></set_script>
+		<new public="1" set="method" line="66">
 			<f a="x:y:?character:?isPlayer:?switchAnims:?disableScripts" v="::&quot;bf&quot;:false:true:false">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -14714,10 +14835,10 @@
 			<meta><m n=":value"><e>false</e></m></meta>
 			<haxe_doc>* Whenever the game has already played a specific cutscene for the current song. Check `startCutscene` for more details.</haxe_doc>
 		</seenCutscene>
-		<resetSongInfos public="1" set="method" line="973" static="1"><f a=""><x path="Void"/></f></resetSongInfos>
-		<getSongChanges get="inline" set="null" line="1463" static="1"><f a=""><c path="Array"><e path="funkin.savedata.HighscoreChange"/></c></f></getSongChanges>
-		<get_campaignAccuracy get="inline" set="null" line="1873" static="1"><f a=""><x path="Float"/></f></get_campaignAccuracy>
-		<loadWeek public="1" set="method" line="1881" static="1">
+		<resetSongInfos public="1" set="method" line="981" static="1"><f a=""><x path="Void"/></f></resetSongInfos>
+		<getSongChanges get="inline" set="null" line="1471" static="1"><f a=""><c path="Array"><e path="funkin.savedata.HighscoreChange"/></c></f></getSongChanges>
+		<get_campaignAccuracy get="inline" set="null" line="1881" static="1"><f a=""><x path="Float"/></f></get_campaignAccuracy>
+		<loadWeek public="1" set="method" line="1889" static="1">
 			<f a="weekData:?difficulty" v=":&quot;normal&quot;">
 				<t path="funkin.menus.WeekData"/>
 				<c path="String"/>
@@ -14728,7 +14849,7 @@
 	 * @param weekData Week Data
 	 * @param difficulty Week Difficulty</haxe_doc>
 		</loadWeek>
-		<loadSong public="1" set="method" line="1901" static="1">
+		<loadSong public="1" set="method" line="1909" static="1">
 			<f a="name:?difficulty:?opponentMode:?coopMode" v=":&quot;normal&quot;:false:false">
 				<c path="String"/>
 				<c path="String"/>
@@ -14743,7 +14864,7 @@
 	 * @param opponentMode Whenever opponent mode is on
 	 * @param coopMode Whenever co-op mode is on.</haxe_doc>
 		</loadSong>
-		<__loadSong public="1" set="method" line="1914" static="1">
+		<__loadSong public="1" set="method" line="1922" static="1">
 			<f a="name:difficulty">
 				<c path="String"/>
 				<c path="String"/>
@@ -14921,9 +15042,8 @@
 			<meta><m n=":value"><e>""</e></m></meta>
 			<haxe_doc>* Current song name (lowercase)</haxe_doc>
 		</curSong>
-		<curStage public="1" expr="&quot;&quot;">
+		<curStage public="1" get="accessor" set="accessor">
 			<c path="String"/>
-			<meta><m n=":value"><e>""</e></m></meta>
 			<haxe_doc>* Current stage name</haxe_doc>
 		</curStage>
 		<gfSpeed public="1" get="accessor" set="accessor">
@@ -15193,20 +15313,25 @@
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_maxHealth>
-		<create public="1" set="method" line="530" override="1">
+		<get_curStage get="inline" set="null" line="530"><f a=""><c path="String"/></f></get_curStage>
+		<set_curStage get="inline" set="null" line="532"><f a="name">
+	<c path="String"/>
+	<c path="String"/>
+</f></set_curStage>
+		<create public="1" set="method" line="538" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</create>
-		<createPost public="1" set="method" line="779" override="1">
+		<createPost public="1" set="method" line="787" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</createPost>
-		<updateDiscordPresence public="1" set="dynamic" line="799">
+		<updateDiscordPresence public="1" set="dynamic" line="807">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Function used to update Discord Presence.
 	 * This function is dynamic, which means you can do `updateDiscordPresence = function() {}` in scripts.</haxe_doc>
 		</updateDiscordPresence>
-		<startCutscene public="1" set="method" line="808">
+		<startCutscene public="1" set="method" line="816">
 			<f a="?prefix:?cutsceneScriptPath:?callback:?checkSeen" v="&quot;&quot;:::false">
 				<c path="String"/>
 				<c path="String"/>
@@ -15221,30 +15346,30 @@
 	 * @param callback Callback called after the cutscene ended. If equals to `null`, `startCountdown` will be called.
 	 * @param checkSeen Bool that by default is false, if true and `seenCutscene` is also true, it won't play the cutscene but directly call `callback` (PS: `seenCutscene` becomes true if the cutscene gets played and `checkSeen` was true)</haxe_doc>
 		</startCutscene>
-		<startCountdown public="1" set="method" line="848">
+		<startCountdown public="1" set="method" line="856">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</startCountdown>
-		<countdown public="1" set="method" line="872">
+		<countdown public="1" set="method" line="880">
 			<f a="swagCounter">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<haxe_doc>* Creates a fake countdown.</haxe_doc>
 		</countdown>
-		<startSong set="method" line="920">
+		<startSong set="method" line="928">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</startSong>
-		<destroy public="1" set="method" line="951" override="1"><f a=""><x path="Void"/></f></destroy>
-		<generateSong set="method" line="979">
+		<destroy public="1" set="method" line="959" override="1"><f a=""><x path="Void"/></f></destroy>
+		<generateSong set="method" line="987">
 			<f a="?songData">
 				<x path="Null"><t path="funkin.backend.chart.ChartData"/></x>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</generateSong>
-		<sortByShit set="method" line="1014">
+		<sortByShit set="method" line="1022">
 			<f a="Obj1:Obj2">
 				<c path="funkin.game.Note"/>
 				<c path="funkin.game.Note"/>
@@ -15252,7 +15377,7 @@
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</sortByShit>
-		<generateStrums get="inline" set="null" line="1020">
+		<generateStrums get="inline" set="null" line="1028">
 			<f a="?amount" v="4">
 				<x path="Int"/>
 				<x path="Void"/>
@@ -15262,59 +15387,59 @@
 				<m n=":dox"><e>hide</e></m>
 			</meta>
 		</generateStrums>
-		<openSubState public="1" set="method" line="1025" override="1">
+		<openSubState public="1" set="method" line="1033" override="1">
 			<f a="SubState">
 				<c path="flixel.FlxSubState"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</openSubState>
-		<closeSubState public="1" set="method" line="1051" override="1">
+		<closeSubState public="1" set="method" line="1059" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</closeSubState>
-		<getIconRPC public="1" get="inline" set="null" line="1076">
+		<getIconRPC public="1" get="inline" set="null" line="1084">
 			<f a=""><c path="String"/></f>
 			<haxe_doc>* Returns the Discord RPC icon.</haxe_doc>
 		</getIconRPC>
-		<onFocus public="1" set="method" line="1080" override="1">
+		<onFocus public="1" set="method" line="1088" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</onFocus>
-		<onFocusLost public="1" set="method" line="1093" override="1">
+		<onFocusLost public="1" set="method" line="1101" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</onFocusLost>
-		<resyncVocals set="method" line="1106">
+		<resyncVocals set="method" line="1114">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</resyncVocals>
-		<pauseGame public="1" set="method" line="1124">
+		<pauseGame public="1" set="method" line="1132">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Pauses the game.</haxe_doc>
 		</pauseGame>
-		<saveWarn public="1" set="method" line="1145">
+		<saveWarn public="1" set="method" line="1153">
 			<f a="?closingWindow" v="true">
 				<x path="Bool"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ closingWindow : true }</e></m></meta>
 		</saveWarn>
-		<updateIconPositions set="method" line="1189"><f a=""><x path="Void"/></f></updateIconPositions>
-		<updateRatingStuff set="method" line="1203"><f a=""><x path="Void"/></f></updateRatingStuff>
-		<update public="1" set="method" line="1221" override="1">
+		<updateIconPositions set="method" line="1197"><f a=""><x path="Void"/></f></updateIconPositions>
+		<updateRatingStuff set="method" line="1211"><f a=""><x path="Void"/></f></updateRatingStuff>
+		<update public="1" set="method" line="1229" override="1">
 			<f a="elapsed">
 				<x path="Float"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</update>
-		<draw public="1" set="method" line="1327" override="1"><f a=""><x path="Void"/></f></draw>
+		<draw public="1" set="method" line="1335" override="1"><f a=""><x path="Void"/></f></draw>
 		<scrollSpeedTween public="1" expr="null">
 			<c path="flixel.tweens.FlxTween"/>
 			<meta><m n=":value"><e>null</e></m></meta>
 		</scrollSpeedTween>
-		<executeEvent public="1" set="method" line="1336"><f a="event">
+		<executeEvent public="1" set="method" line="1344"><f a="event">
 	<t path="funkin.backend.chart.ChartEvent"/>
 	<x path="Void"/>
 </f></executeEvent>
@@ -15325,7 +15450,7 @@
 				<m n=":dox"><e>hide</e></m>
 			</meta>
 		</__updateNote_event>
-		<gameOver public="1" set="method" line="1398">
+		<gameOver public="1" set="method" line="1406">
 			<f a="?character:?deathCharID:?gameOverSong:?lossSFX:?retrySFX">
 				<c path="funkin.game.Character"/>
 				<c path="String"/>
@@ -15341,17 +15466,17 @@
 	 * @param lossSFX SFX at the beginning of the game over (Mic drop). Default to `this.lossSFX` (`gameOverSFX`)
 	 * @param retrySFX SFX played whenever the player retries. Defaults to `retrySFX` (`gameOverEnd`)</haxe_doc>
 		</gameOver>
-		<endSong public="1" set="method" line="1434">
+		<endSong public="1" set="method" line="1442">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Ends the song.</haxe_doc>
 		</endSong>
-		<nextSong public="1" set="method" line="1475">
+		<nextSong public="1" set="method" line="1483">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Immediately switches to the next song, or goes back to the Story/Freeplay menu.</haxe_doc>
 		</nextSong>
-		<registerSmoothTransition public="1" set="method" line="1524"><f a=""><x path="Void"/></f></registerSmoothTransition>
-		<keyShit get="inline" set="null" line="1538"><f a=""><x path="Void"/></f></keyShit>
-		<noteMiss public="1" set="method" line="1551">
+		<registerSmoothTransition public="1" set="method" line="1532"><f a=""><x path="Void"/></f></registerSmoothTransition>
+		<keyShit get="inline" set="null" line="1546"><f a=""><x path="Void"/></f></keyShit>
+		<noteMiss public="1" set="method" line="1559">
 			<f a="strumLine:note:?direction:?player">
 				<c path="funkin.game.StrumLine"/>
 				<c path="funkin.game.Note"/>
@@ -15365,14 +15490,14 @@
 	 * @param direction Specify a custom direction in case note is null.
 	 * @param player Specify a custom player in case note is null.</haxe_doc>
 		</noteMiss>
-		<getNoteType public="1" set="method" line="1597">
+		<getNoteType public="1" set="method" line="1605">
 			<f a="id">
 				<x path="Int"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</getNoteType>
-		<goodNoteHit public="1" set="method" line="1606">
+		<goodNoteHit public="1" set="method" line="1614">
 			<f a="strumLine:note">
 				<c path="funkin.game.StrumLine"/>
 				<c path="funkin.game.Note"/>
@@ -15381,7 +15506,7 @@
 			<haxe_doc>* Hits a note
 	 * @param note Note to hit.</haxe_doc>
 		</goodNoteHit>
-		<displayRating public="1" set="method" line="1692">
+		<displayRating public="1" set="method" line="1700">
 			<f a="myRating:?evt" v=":null">
 				<c path="String"/>
 				<c path="funkin.backend.scripting.events.NoteHitEvent"/>
@@ -15389,71 +15514,71 @@
 			</f>
 			<meta><m n=":value"><e>{ evt : null }</e></m></meta>
 		</displayRating>
-		<displayCombo public="1" set="method" line="1716">
+		<displayCombo public="1" set="method" line="1724">
 			<f a="?evt" v="null">
 				<c path="funkin.backend.scripting.events.NoteHitEvent"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ evt : null }</e></m></meta>
 		</displayCombo>
-		<deleteNote public="1" get="inline" set="null" line="1771"><f a="note">
+		<deleteNote public="1" get="inline" set="null" line="1779"><f a="note">
 	<c path="funkin.game.Note"/>
 	<x path="Void"/>
 </f></deleteNote>
-		<stepHit public="1" set="method" line="1776" override="1">
+		<stepHit public="1" set="method" line="1784" override="1">
 			<f a="curStep">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</stepHit>
-		<measureHit public="1" set="method" line="1783" override="1">
+		<measureHit public="1" set="method" line="1791" override="1">
 			<f a="curMeasure">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</measureHit>
-		<beatHit public="1" set="method" line="1790" override="1">
+		<beatHit public="1" set="method" line="1798" override="1">
 			<f a="curBeat">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":dox"><e>hide</e></m></meta>
 		</beatHit>
-		<addScript public="1" set="method" line="1812"><f a="file">
+		<addScript public="1" set="method" line="1820"><f a="file">
 	<c path="String"/>
 	<x path="Void"/>
 </f></addScript>
-		<get_player get="inline" set="null" line="1821"><f a=""><c path="funkin.game.StrumLine"/></f></get_player>
-		<set_player get="inline" set="null" line="1823"><f a="s">
+		<get_player get="inline" set="null" line="1829"><f a=""><c path="funkin.game.StrumLine"/></f></get_player>
+		<set_player get="inline" set="null" line="1831"><f a="s">
 	<c path="funkin.game.StrumLine"/>
 	<c path="funkin.game.StrumLine"/>
 </f></set_player>
-		<get_cpu get="inline" set="null" line="1826"><f a=""><c path="funkin.game.StrumLine"/></f></get_cpu>
-		<set_cpu get="inline" set="null" line="1828"><f a="s">
+		<get_cpu get="inline" set="null" line="1834"><f a=""><c path="funkin.game.StrumLine"/></f></get_cpu>
+		<set_cpu get="inline" set="null" line="1836"><f a="s">
 	<c path="funkin.game.StrumLine"/>
 	<c path="funkin.game.StrumLine"/>
 </f></set_cpu>
-		<get_boyfriend set="method" line="1830"><f a=""><c path="funkin.game.Character"/></f></get_boyfriend>
-		<set_boyfriend set="method" line="1835"><f a="bf">
+		<get_boyfriend set="method" line="1838"><f a=""><c path="funkin.game.Character"/></f></get_boyfriend>
+		<set_boyfriend set="method" line="1843"><f a="bf">
 	<c path="funkin.game.Character"/>
 	<c path="funkin.game.Character"/>
 </f></set_boyfriend>
-		<get_dad set="method" line="1840"><f a=""><c path="funkin.game.Character"/></f></get_dad>
-		<set_dad set="method" line="1845"><f a="dad">
+		<get_dad set="method" line="1848"><f a=""><c path="funkin.game.Character"/></f></get_dad>
+		<set_dad set="method" line="1853"><f a="dad">
 	<c path="funkin.game.Character"/>
 	<c path="funkin.game.Character"/>
 </f></set_dad>
-		<get_gf set="method" line="1850"><f a=""><c path="funkin.game.Character"/></f></get_gf>
-		<set_gf set="method" line="1855"><f a="gf">
+		<get_gf set="method" line="1858"><f a=""><c path="funkin.game.Character"/></f></get_gf>
+		<set_gf set="method" line="1863"><f a="gf">
 	<c path="funkin.game.Character"/>
 	<c path="funkin.game.Character"/>
 </f></set_gf>
-		<get_cpuStrums get="inline" set="null" line="1861"><f a=""><c path="funkin.game.StrumLine"/></f></get_cpuStrums>
-		<get_playerStrums get="inline" set="null" line="1863"><f a=""><c path="funkin.game.StrumLine"/></f></get_playerStrums>
-		<get_gfSpeed get="inline" set="null" line="1865"><f a=""><x path="Int"/></f></get_gfSpeed>
-		<set_gfSpeed get="inline" set="null" line="1866"><f a="v">
+		<get_cpuStrums get="inline" set="null" line="1869"><f a=""><c path="funkin.game.StrumLine"/></f></get_cpuStrums>
+		<get_playerStrums get="inline" set="null" line="1871"><f a=""><c path="funkin.game.StrumLine"/></f></get_playerStrums>
+		<get_gfSpeed get="inline" set="null" line="1873"><f a=""><x path="Int"/></f></get_gfSpeed>
+		<set_gfSpeed get="inline" set="null" line="1874"><f a="v">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_gfSpeed>
@@ -15472,7 +15597,7 @@
 		<percent public="1"><x path="Float"/></percent>
 		<rating public="1"><c path="String"/></rating>
 		<color public="1"><x path="flixel.util.FlxColor"/></color>
-		<new public="1" set="method" line="1927"><f a="percent:rating:color">
+		<new public="1" set="method" line="1935"><f a="percent:rating:color">
 	<x path="Float"/>
 	<c path="String"/>
 	<x path="flixel.util.FlxColor"/>
@@ -15580,6 +15705,10 @@
 			</f>
 			<meta><m n=":value"><e>{ mods : false }</e></m></meta>
 		</getList>
+		<stageName public="1" expr="&quot;&quot;">
+			<c path="String"/>
+			<meta><m n=":value"><e>""</e></m></meta>
+		</stageName>
 		<stageXML public="1"><x path="haxe.xml.Access"/></stageXML>
 		<stagePath public="1"><c path="String"/></stagePath>
 		<stageSprites public="1" expr="[]">
@@ -15599,20 +15728,33 @@
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</characterPoses>
 		<xmlImportedScripts public="1" expr="[]">
-			<t path="Map">
-				<c path="String"/>
-				<x path="Bool"/>
-			</t>
+			<c path="Array"><c path="funkin.backend.utils.XMLImportedScriptInfo"/></c>
 			<meta><m n=":value"><e>[]</e></m></meta>
 		</xmlImportedScripts>
 		<spritesParentFolder expr="&quot;&quot;">
 			<c path="String"/>
 			<meta><m n=":value"><e>""</e></m></meta>
 		</spritesParentFolder>
-		<getSprite public="1" set="method" line="26"><f a="name">
+		<getSprite public="1" set="method" line="29"><f a="name">
 	<c path="String"/>
 	<x path="Null"><c path="flixel.FlxSprite"/></x>
 </f></getSprite>
+		<setStagesSprites public="1" set="method" line="32"><f a="script">
+	<c path="funkin.backend.scripting.Script"/>
+	<x path="Void"/>
+</f></setStagesSprites>
+		<prepareInfos public="1" set="method" line="35"><f a="node">
+	<x path="haxe.xml.Access"/>
+	<c path="funkin.backend.utils.XMLImportedScriptInfo"/>
+</f></prepareInfos>
+		<__pushNcheckNode set="method" line="206">
+			<f a="array:node">
+				<c path="Array"><x path="haxe.xml.Access"/></c>
+				<x path="haxe.xml.Access"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":dox"><e>hide</e></m></meta>
+		</__pushNcheckNode>
 		<addCharPos public="1" set="method" line="212"><f a="name:node:?nonXMLInfo">
 	<c path="String"/>
 	<x path="haxe.xml.Access"/>
@@ -15648,7 +15790,7 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></measureHit>
-		<new public="1" set="method" line="30"><f a="stage:?state">
+		<new public="1" set="method" line="37"><f a="stage:?state">
 	<c path="String"/>
 	<c path="flixel.FlxState"/>
 	<x path="Void"/>
@@ -17202,6 +17344,10 @@
 			<c path="String"/>
 			<meta><m n=":value"><e>"FNF-CNE-Devs"</e></m></meta>
 		</author>
+		<totalContributions public="1" expr="0">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</totalContributions>
 		<mainDevCol public="1" expr="0xFF9C35D5">
 			<x path="flixel.util.FlxColor"/>
 			<meta><m n=":value"><e>0xFF9C35D5</e></m></meta>
@@ -17210,10 +17356,10 @@
 			<x path="flixel.util.FlxColor"/>
 			<meta><m n=":value"><e>0xFFB4A7DA</e></m></meta>
 		</minContrCol>
-		<totalContributions public="1" expr="0">
-			<x path="Int"/>
-			<meta><m n=":value"><e>0</e></m></meta>
-		</totalContributions>
+		<contribFormats public="1" expr="[]">
+			<c path="Array"><c path="flixel.text.FlxTextFormatMarkerPair"/></c>
+			<meta><m n=":value"><e>[]</e></m></meta>
+		</contribFormats>
 		<_canReset expr="true">
 			<x path="Bool"/>
 			<meta><m n=":value"><e>true</e></m></meta>
@@ -17222,25 +17368,26 @@
 			<x path="Int"/>
 			<meta><m n=":value"><e>0</e></m></meta>
 		</_downloadingSteps>
-		<update public="1" set="method" line="27" override="1"><f a="elapsed">
+		<update public="1" set="method" line="29" override="1"><f a="elapsed">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></update>
-		<tryUpdating public="1" set="method" line="42">
+		<tryUpdating public="1" set="method" line="44">
 			<f a="?forceDisplaying" v="false">
 				<x path="Bool"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":value"><e>{ forceDisplaying : false }</e></m></meta>
 		</tryUpdating>
-		<updateMenuDesc public="1" set="method" line="51" override="1"><f a="?txt">
+		<updateMenuDesc public="1" set="method" line="53" override="1"><f a="?txt">
 	<c path="String"/>
 	<x path="Void"/>
 </f></updateMenuDesc>
-		<updateMarkup public="1" set="method" line="57"><f a=""><x path="Void"/></f></updateMarkup>
-		<checkUpdate public="1" set="method" line="67"><f a=""><x path="Bool"/></f></checkUpdate>
-		<displayList public="1" set="method" line="98"><f a=""><x path="Void"/></f></displayList>
-		<new public="1" set="method" line="18"><f a=""><x path="Void"/></f></new>
+		<updateMarkup public="1" set="method" line="59"><f a=""><x path="Void"/></f></updateMarkup>
+		<close public="1" set="method" line="69" override="1"><f a=""><x path="Void"/></f></close>
+		<checkUpdate public="1" set="method" line="74"><f a=""><x path="Bool"/></f></checkUpdate>
+		<displayList public="1" set="method" line="105"><f a=""><x path="Void"/></f></displayList>
+		<new public="1" set="method" line="20"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="funkin.menus.credits.CreditsMain" params="" file="source/funkin/menus/credits/CreditsMain.hx">
