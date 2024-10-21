@@ -14,6 +14,7 @@ To get started, you get 2 choices:
 
 Using an FlxVideo looks something like this:
 ```haxe
+import hxvlc.flixel.FlxVideo;
 var video:FlxVideo = new FlxVideo();
 video.onEndReached.add(function():Void
 {
@@ -28,6 +29,7 @@ if (video.load(Paths.video("video")))
 ```
 And using an FlxVideoSprite looks like this:
 ```haxe
+import hxvlc.flixel.FlxVideoSprite;
 var video:FlxVideoSprite = new FlxVideoSprite(0, 0);
 video.antialiasing = true;
 video.bitmap.onFormatSetup.add(function():Void
