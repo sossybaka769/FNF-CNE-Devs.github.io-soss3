@@ -25,7 +25,16 @@ function toggleInherited(el) {
 
 function toggleCollapsed(el) {
     var toggle = el.closest(".expando");
-    toggle.classList.toggle("expanded");
+    toggleCollapsedElement(toggle);
+
+    //updateTreeState();
+    return false;
+}
+
+window.toggleCollapsed = toggleCollapsed;
+
+function toggleCollapsedElement(toggle) {
+	toggle.classList.toggle("expanded");
 
     var icon = toggle.querySelector("i");
     if (toggle.classList.contains("expanded")) {
@@ -35,12 +44,7 @@ function toggleCollapsed(el) {
         icon.classList.add("fa-folder");
         icon.classList.remove("fa-folder-open");
     }
-
-    //updateTreeState();
-    return false;
 }
-
-window.toggleCollapsed = toggleCollapsed;
 
 /*function updateTreeState() {
 	var states = [];
@@ -54,6 +58,14 @@ window.toggleCollapsed = toggleCollapsed;
 document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById("nav").innerHTML = navContent;
 
+	//var treeState = readCookie("treeState");
+
+	document.querySelectorAll("#nav .expando").forEach(function (el) {
+		var i = el.querySelector("i");
+		i.classList.add("fa-folder");
+		i.classList.remove("fa-folder-open");
+	});
+
 	document.querySelectorAll("#nav li > a.treeLink").forEach(function (el) {
 		if (el.parentElement.getAttribute("data-pack") == dox.currentPackage) {
 			el.classList.add("selected");
@@ -61,19 +73,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			var ee = el.parentElement;
 			while (ee != null) {
 				if(ee.classList.contains("expando")) {
-					ee.classList.add("expanded");
+					toggleCollapsedElement(ee);
 				}
 				ee = ee.parentElement;
 			}
 		}
-	});
-
-	//var treeState = readCookie("treeState");
-
-	document.querySelectorAll("#nav .expando").forEach(function (el) {
-		var i = el.querySelector("i");
-		i.classList.add("fa-folder");
-		i.classList.remove("fa-folder-open");
 	});
 
 	//document.querySelectorAll(".treeLink").forEach(function (el) {
