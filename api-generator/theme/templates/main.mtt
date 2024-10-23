@@ -34,10 +34,12 @@ $$comment(::" use textcolor from settings, otherwise create a contrasting color 
 						<input id="search" type="text" placeholder="Filter (Ctrl+P)" autocomplete="off"/>
 					</div>
 					</form></li>
-				<li><a href="::api.config.rootPath::">
-					<i class="fa fa-home"></i>
-					Top-level
-				</a></li>
+				<li data-pack="::api.config.toplevelPackage::">
+					<a class="treeLink" href="::api.config.rootPath::">
+						<i class="fa fa-home"></i>
+						Top-level
+					</a>
+				</li>
 			</ul>
 			<span id="nav">
 				$$comment(::" Automatically populated by index.js "::)

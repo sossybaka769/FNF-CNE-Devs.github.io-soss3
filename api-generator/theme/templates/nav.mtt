@@ -12,7 +12,8 @@
 	::case::
 		::set name = args[0]::
 		<li ::cond name.charAt(0) != "_"::
-			::attr class "expando " + if (depth == 0) "package-" + name else "" ::>
+			::attr class "sidebar-package expando" + if (depth == 0) " package-" + name else "" ::
+			::attr "data-pack" api.getTreePath(tree):: >
 			<a class="nav-header" href="#" onclick="return toggleCollapsed(this)">
 				<i class="fa fa-folder"></i>
 				::api.getTreeName(tree)::

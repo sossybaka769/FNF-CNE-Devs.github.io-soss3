@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		i.classList.remove("fa-folder-open");
 	});
 
-	document.querySelectorAll("#nav li > a.treeLink").forEach(function (el) {
+	function expandCheck(el) {
 		if (el.parentElement.getAttribute("data-pack") == dox.currentPackage) {
 			el.classList.add("selected");
 
@@ -78,7 +78,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				ee = ee.parentElement;
 			}
 		}
-	});
+	}
+
+	document.querySelectorAll("li > a.treeLink").forEach(expandCheck);
+	document.querySelectorAll("li.sidebar-package > a.nav-header").forEach(expandCheck);
 
 	//document.querySelectorAll(".treeLink").forEach(function (el) {
 	//	el.href = el.href.replace("::rootPath::", dox.rootPath);
