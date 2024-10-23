@@ -42,7 +42,6 @@ copyDir("./src/img/", exportPath + "/img/");
 compileSass("./src/style.scss", exportPath + "/style.css");
 compileSass("./src/pages/wiki.scss", exportPath + "/wiki.css");
 compileSass("./src/pages/index.scss", exportPath + "/index.css");
-compileSass("./src/pages/api-docs.scss", exportPath + "/api-docs.css");
 compileSass("./src/giscus-theme.scss", exportPath + "/giscus-theme.css");
 compileSass("./src/pages/ko-fi.scss", exportPath + "/ko-fi.css");
 compileSass("./src/pages/tools/tools.scss", exportPath + "/tools.css");

@@ -2,7 +2,7 @@ var path = require("path");
 var fs = require('fs');
 const { execSync } = require('child_process');
 
-var { fixHtmlRefs, copyDir, parseTemplate, compileJs, htmlToString } = require("../../utils.js");
+var { fixHtmlRefs, copyDir, parseTemplate, compileJs, htmlToString, compileSass } = require("../../utils.js");
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
 
 const apiGenerator = path.join(__dirname, "..", "..", '..', 'api-generator');
@@ -11,8 +11,10 @@ function alwaysRun(exportPath) {
 	if (!fs.existsSync(exportPath)) {
 		fs.mkdirSync(exportPath, {recursive: true});
 	}
+	var prevPath = path.join(exportPath, "..");
 	compileJs("./src/pages/api-docs/resources/highlighter.js", exportPath + "highlighter.js");
 	compileJs("./src/pages/api-docs/resources/index.js", exportPath + "index.js");
+	compileSass("./src/pages/api-docs/resources/api-docs.scss", prevPath + "/api-docs.css");
 }
 
 function buildHtml(_pageDir, _exportPath) {

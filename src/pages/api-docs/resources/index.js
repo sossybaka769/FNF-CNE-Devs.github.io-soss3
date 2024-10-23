@@ -53,7 +53,22 @@ window.toggleCollapsed = toggleCollapsed;
 
 document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById("nav").innerHTML = navContent;
-	var treeState = readCookie("treeState");
+
+	document.querySelectorAll("#nav li > a.treeLink").forEach(function (el) {
+		if (el.parentElement.getAttribute("data-pack") == dox.currentPackage) {
+			el.classList.add("selected");
+
+			var ee = el.parentElement;
+			while (ee != null) {
+				if(ee.classList.contains("expando")) {
+					ee.classList.add("expanded");
+				}
+				ee = ee.parentElement;
+			}
+		}
+	});
+
+	//var treeState = readCookie("treeState");
 
 	document.querySelectorAll("#nav .expando").forEach(function (el) {
 		var i = el.querySelector("i");
@@ -61,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		i.classList.remove("fa-folder-open");
 	});
 
-	document.querySelectorAll(".treeLink").forEach(function (el) {
-		el.href = el.href.replace("::rootPath::", dox.rootPath);
-	});
+	//document.querySelectorAll(".treeLink").forEach(function (el) {
+	//	el.href = el.href.replace("::rootPath::", dox.rootPath);
+	//});
 
 	/*if (treeState != null) {
 		var states = JSON.parse(treeState);
@@ -79,19 +94,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	//setPlatform(readCookie("platform") == null ? "all" : readCookie("platform"));
 
-	document.querySelector("#search").addEventListener("input", function (e) {
+	var searchElement = document.getElementById("search");
+
+	searchElement.addEventListener("input", function (e) {
 		searchQuery(e.target.value);
 	});
 	document.addEventListener("keyup", function (e) {
-		if (e.ctrlKey && e.keyCode == 80) { // ctrl + p
-			document.querySelector("#search").focus();
+		if ((e.ctrlKey || e.metaKey) && e.code == "KeyF") { // ctrl + f
+			console.log("ctrl + f");
+			searchElement.focus();
 			return false;
 		}
 		return true;
 	});
 	document.addEventListener("keydown", function (e) {
-		if (e.ctrlKey && e.keyCode == 80) { // ctrl + f
-			document.querySelector("#search").focus();
+		if ((e.ctrlKey || e.metaKey) && e.code == "KeyF") { // ctrl + f
+			console.log("ctrl + f");
+			searchElement.focus();
 			return false;
 		}
 		return true;
@@ -99,17 +118,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	function getItems() {
 		return document.querySelectorAll("#search-results-list a");
 	}
-	document.querySelector("#search").addEventListener("keyup", function (e) {
-		switch (e.keyCode) {
-			case 27: // escape
+	searchElement.addEventListener("keyup", function (e) {
+		switch (e.code) {
+			case "Escape": // escape
 				searchQuery("");
-				document.querySelector("#search").value = "";
-				document.querySelector("#search").dispatchEvent(new Event("blur"));
+				searchElement.value = "";
+				searchElement.dispatchEvent(new Event("blur"));
 				return false;
 
-			case 13: // enter
+			case "Enter": // enter
 				var items = getItems();
-				for (i = 0; i < items.length; i++) {
+				for (var i = 0; i < items.length; i++) {
 					var item = items[i];
 					if (item.classList.contains("selected")) {
 						window.location = items[i].href;
@@ -119,15 +138,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				return false;
 		}
 	});
-	document.querySelector("#search").addEventListener("keydown", function (e) {
+	searchElement.addEventListener("keydown", function (e) {
 		function mod(a, b) {
 			var r = a % b;
 			return r < 0 ? r + b : r;
 		}
 		function changeSelection(amount) {
-			var previousSelection = null;
+			var previousSelection = -1;
 			var items = getItems();
-			for (i = 0; i < items.length; i++) {
+			if(items.length == 0)
+				return
+			for (var i = 0; i < items.length; i++) {
 				var item = items[i];
 				if (item.classList.contains("selected")) {
 					item.classList.remove("selected");
@@ -136,19 +157,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				}
 			}
 			var newSelection = mod(previousSelection + amount, items.length);
+			if(previousSelection == -1) {
+				newSelection = 0;
+			}
 			items[newSelection].classList.add("selected");
 			items[newSelection].scrollIntoView(false);
 		}
-		switch (e.keyCode) {
-			case 38: // up
+		switch (e.code) {
+			case "ArrowUp": // up
 				changeSelection(-1);
 				return false;
 
-			case 40: // down
+			case "ArrowDown": // down
 				changeSelection(1);
 				return false;
 
-			case 13: // enter
+			case "Enter": // enter
+				e.preventDefault();
 				return false;
 		}
 	});
@@ -157,12 +182,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		var value = $(":selected", this).val();
 		setPlatform(value);
 	});*/
-
-	document.querySelectorAll("#nav a").forEach(function (el) {
-		if (el.href == location.href) {
-			el.parentElement.classList.add("selected");
-		}
-	});
 
 	document.querySelectorAll("a.expand-button").forEach(function (el) {
 		var inheritedBlock = el.parentElement.nextElementSibling;
@@ -185,6 +204,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 });
 
+function fillSearchResultsList() {
+	if (document.querySelector("#search-results-list") == null) {
+		// append to nav
+		document.querySelector("#nav").parentElement.insertAdjacentHTML("beforeend", "<ul id='search-results-list' class='sidebar-unordered-list'></ul>");
+	}
+}
+
 function searchQuery(query) {
 	document.querySelector("#searchForm").removeAttribute("action");
 	query = query.replace(/[&<>"']/g, "");
@@ -194,6 +220,7 @@ function searchQuery(query) {
 			el.style.display = "";
 		});
 		document.querySelector("#nav ul:first-child").style.display = "block";
+		fillSearchResultsList();
 		document.querySelector("#search-results-list").style.display = "none";
 		return;
 	}
@@ -205,11 +232,11 @@ function searchQuery(query) {
 	document.querySelectorAll("#nav li").forEach(function (el) {
 		var element = el;
 		if (!element.classList.contains("expando")) {
-			var content = element.getAttribute("data_path");
+			var content = element.getAttribute("data-pack");
 			var score = searchMatch(content, queryParts);
 			if (score >= 0) {
 				if (score < bestMatch) {
-					var url = dox.rootPath + element.getAttribute("data_path").split(".").join("/") + ".html";
+					var url = dox.rootPath + content.split(".").join("/") + ".html";
 					document.querySelector("#searchForm").setAttribute("action", url);
 					// best match will be form action
 					bestMatch = score;
@@ -223,18 +250,16 @@ function searchQuery(query) {
 			}
 		}
 	});
-	if (document.querySelector("#search-results-list") == null) {
-		// append to nav
-		document.querySelector("#nav").parentElement.insertAdjacentHTML("beforeend", "<ul id='search-results-list' class='sidebar-unordered-list'></ul>");
-	}
+	fillSearchResultsList();
 	listItems.sort(function (x, y) { return x.score - y.score; }); // put in order
-	document.querySelector("#search-results-list").style.display = "block";
-	document.querySelector("#search-results-list").innerHTML = listItems.map(function (x) { return x.item; }).join("");
+	var searchList = document.querySelector("#search-results-list");
+	searchList.style.display = "block";
+	searchList.innerHTML = listItems.map(function (x) { return x.item; }).join("");
 	// pre-select the first item
 	document.querySelectorAll("#search-results-list a").forEach(function (el) {
 		el.classList.remove("selected");
 	});
-	document.querySelectorAll("#search-results-list a")[0].classList.add("selected");
+	//document.querySelectorAll("#search-results-list a")[0].classList.add("selected");
 }
 
 function match(textParts, query) {
@@ -298,7 +323,7 @@ function errorSearch() {
 		if (searchTerm.indexOf(".html") > -1) { searchTerm = searchTerm.split(".html").join(""); }
 		if (!!searchTerm) {
 			// update filter with search term
-			document.querySelector("#search").value = searchTerm;
+			searchElement.value = searchTerm;
 			searchQuery(searchTerm);
 		}
 	}

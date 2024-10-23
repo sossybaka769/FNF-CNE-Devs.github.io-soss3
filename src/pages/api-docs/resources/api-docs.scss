@@ -429,3 +429,10 @@ pre .cmt .type {
 p code, th code {
   padding: 0.3em;
 }
+
+
+li > a {
+  &.selected:before {
+    background: var(--primary-color);
+  }
+}

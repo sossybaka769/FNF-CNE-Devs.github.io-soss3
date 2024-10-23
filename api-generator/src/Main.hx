@@ -5,6 +5,9 @@ import dox.Config;
 import dox.Dox;
 import haxe.rtti.CType.TypeInfos;
 import sys.io.File;
+import sys.io.File;
+import haxe.Json;
+import haxe.rtti.CType;
 
 using StringTools;
 
@@ -51,16 +54,29 @@ class Main {
 }
 
 class CodenameApi extends Api {
-	override function pathToUrl(path:String):String {
-		var res = super.pathToUrl(path);
+	override public function pathToUrl(path:Path):String {
+		var rootPath = config.rootPath;
+		if(config.rootPath == "::rootPath::") {
+			rootPath = "/api-docs/";
+		}
+		var res = rootPath + sanitizePath(path).split(".").join("/") + ".html";
 		if(res.endsWith("index.html")) {
 			res = res.substr(0, res.length - 10);
 		}
 		return res;
 	}
 
-	override function packageToUrl(path:String):String {
-		var res = super.packageToUrl(path);
+	override public function packageToUrl(full:String):String {
+		var rootPath = config.rootPath;
+		if(config.rootPath == "::rootPath::") {
+			rootPath = "/api-docs/";
+		}
+		var res;
+		if (full == config.toplevelPackage) {
+			res = rootPath + "index.html";
+		} else {
+			res = rootPath + full.split(".").join("/") + "/index.html";
+		}
 		if(res.endsWith("index.html")) {
 			res = res.substr(0, res.length - 10);
 		}

@@ -7,6 +7,7 @@
 	<link href="/api-docs.css" rel="stylesheet" />
 	<script>var dox = {
 		rootPath: "::api.config.rootPath::",
+		currentPackage: "::api.currentPageName::",
 		platforms: [
 			::foreach pf api.config.platforms::
 				"::pf::"

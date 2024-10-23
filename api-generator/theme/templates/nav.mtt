@@ -1,6 +1,6 @@
 <macro name="makeTree(tree,depth)">
 	::switch tree::
-	<li ::attr data_path api.getTreePath(tree)::>
+	<li ::attr "data-pack" api.getTreePath(tree)::>
 		::set pack = api.getTreePack(tree)::
 		<a class="treeLink" href="::api.getTreeUrl(tree)::" title=":: pack + "." + api.getTreeName(tree) ::">
 			::api.getTreeName(tree)::
