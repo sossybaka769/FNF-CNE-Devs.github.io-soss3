@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 	document.addEventListener("keyup", function (e) {
 		if ((e.ctrlKey || e.metaKey) && e.code == "KeyF") { // ctrl + f
-			console.log("ctrl + f");
 			searchElement.focus();
 			return false;
 		}
@@ -113,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 	document.addEventListener("keydown", function (e) {
 		if ((e.ctrlKey || e.metaKey) && e.code == "KeyF") { // ctrl + f
-			console.log("ctrl + f");
 			searchElement.focus();
 			return false;
 		}
