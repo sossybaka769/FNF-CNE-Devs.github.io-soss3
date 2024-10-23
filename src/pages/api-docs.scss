@@ -77,14 +77,14 @@ a.treeLink {
 
 code, code a {
   font-family: monospace;
-  padding: 0.3em;
+  //padding: 0.3em;
 }
 code {
   color: white !important;
 }
 
 .anchor > code {
-  padding: 0.4em;
+  padding: 0.4em 0.6em;
   font-size: 13px;
   font-family: monospace;
 }
