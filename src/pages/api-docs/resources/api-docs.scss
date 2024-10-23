@@ -432,6 +432,8 @@ p code, th code {
 
 
 li > a {
+  padding: 0;
+
   &.selected:before {
     background: var(--primary-color);
   }
