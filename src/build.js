@@ -3,7 +3,7 @@ var hljs = require('highlight.js');
 var haxeformat = require('./haxeformat.js');
 var wiki = require('./pages/wiki.build.js');
 var tools = require('./pages/tools/tools.build.js');
-var apiDocs = require('./pages/apiDocs.build.js');
+var apiDocs = require('./pages/api-docs/apiDocs.build.js');
 var indexPage = require('./pages/index.build.js');
 var sitemap = require("./sitemap.build.js");
 
@@ -62,6 +62,8 @@ if(isFirstRun) {
 		console.log("Skipping API Docs build (not full build)...");
 		apiDocs.buildNotBuilt(pageDir, exportPath); // builds into /api-docs
 	}
+} else {
+	apiDocs.alwaysRun(exportPath + "/api-docs/");
 }
 
 if(isFirstRun && isFullBuild) {

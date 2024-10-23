@@ -1,4 +1,5 @@
 (function () {
+"use strict";
 function getRelativeTimeString(
 	date, // Date | number
 	lang = "en" // navigator.language

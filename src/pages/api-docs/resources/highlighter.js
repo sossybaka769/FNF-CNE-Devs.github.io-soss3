@@ -1,5 +1,5 @@
-// highlighter adapted/modified from code.haxe.org
-// cleaned up by Ne_Eo
+//! highlighter adapted/modified from code.haxe.org
+//! cleaned up by Ne_Eo
 (function () { "use strict";
 var EReg = function(r,opt) {
 	opt = opt.split("u").join("");

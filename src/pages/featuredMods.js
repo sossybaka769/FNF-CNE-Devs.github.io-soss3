@@ -1,4 +1,5 @@
 (function () {
+"use strict";
 function randomizeOrder() {
 	var mods = document.querySelectorAll(".featured-mod");
 	var parent = mods[0].parentNode;

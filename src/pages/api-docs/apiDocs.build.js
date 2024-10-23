@@ -2,17 +2,23 @@ var path = require("path");
 var fs = require('fs');
 const { execSync } = require('child_process');
 
-var { fixHtmlRefs, copyDir, parseTemplate } = require("../utils.js");
+var { fixHtmlRefs, copyDir, parseTemplate, compileJs, htmlToString } = require("../../utils.js");
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
 
-const apiGenerator = path.join(__dirname, "..", "..", 'api-generator');
+const apiGenerator = path.join(__dirname, "..", "..", '..', 'api-generator');
+
+function alwaysRun(exportPath) {
+	if (!fs.existsSync(exportPath)) {
+		fs.mkdirSync(exportPath, {recursive: true});
+	}
+	compileJs("./src/pages/api-docs/resources/highlighter.js", exportPath + "highlighter.js");
+	compileJs("./src/pages/api-docs/resources/index.js", exportPath + "index.js");
+}
 
 function buildHtml(_pageDir, _exportPath) {
 	var pageDir = _pageDir + "api-docs/";
 	var exportPath = _exportPath + "api-docs/";
-	if (!fs.existsSync(exportPath)) {
-		fs.mkdirSync(exportPath, {recursive: true});
-	}
+	alwaysRun(exportPath);
 	console.log("Building Api Docs");
 	console.log("Using api generator at " + apiGenerator);
 
@@ -32,22 +38,21 @@ function buildHtml(_pageDir, _exportPath) {
 }
 
 function buildNotBuilt(_pageDir, _exportPath) {
-	var pageDir = _pageDir + "api-docs-not-built/";
+	var pageDir = _pageDir + "api-docs/";
 	var exportPath = _exportPath + "api-docs/";
-	if (!fs.existsSync(exportPath)) {
-		fs.mkdirSync(exportPath, {recursive: true});
-	}
+	alwaysRun(exportPath);
 
-	var html = fs.readFileSync("./src/pages/api-docs-not-built/index.html", 'utf8');
+	var html = fs.readFileSync("./src/pages/api-docs/not-built.html", 'utf8');
 	html = parseTemplate(html, {
 		title: "API Docs",
 		header: header
 	});
 	let doc = fixHtmlRefs(html, pageDir, _pageDir);
-	fs.writeFileSync(exportPath + "/index.html", doc.serialize(), 'utf8');
+	fs.writeFileSync(exportPath + "/index.html", htmlToString(doc), 'utf8');
 }
 
 module.exports = {
 	buildHtml: buildHtml,
-	buildNotBuilt: buildNotBuilt
+	buildNotBuilt: buildNotBuilt,
+	alwaysRun: alwaysRun
 }

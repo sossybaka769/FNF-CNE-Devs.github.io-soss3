@@ -1,3 +1,4 @@
+(function () {"use strict";
 function createCookie(name, value) {
 	localStorage.setItem(name, value);
 }
@@ -38,6 +39,8 @@ function toggleCollapsed(el) {
     //updateTreeState();
     return false;
 }
+
+window.toggleCollapsed = toggleCollapsed;
 
 /*function updateTreeState() {
 	var states = [];
@@ -300,3 +303,4 @@ function errorSearch() {
 		}
 	}
 }
+})();
