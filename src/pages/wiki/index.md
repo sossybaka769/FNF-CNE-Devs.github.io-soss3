@@ -20,6 +20,7 @@ Here is documentation on functions of the engine (gameplay and modding), and how
     - <a href="./modding/stages/">Creating stages</a>
         - <a href="./modding/stages/stage-extensions.md">Stage Extensions</a>
     - <a href="./modding/cutscenes-dialogues.md">Cutscenes/Dialogues</a>
+    - <a href="./modding/note-splashes.md">Note Splashes</a>
     - <a href="./modding/scripting/">Scripting</a>
         - <a href="./modding/scripting/playstate-scripts/">PlayState Scripts</a>
             - <a href="./modding/scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>
@@ -29,14 +30,14 @@ Here is documentation on functions of the engine (gameplay and modding), and how
             - <a href="./modding/scripting/playstate-scripts/events-notetypes-scripts.md">Events/Notetype Scripts</a>
         - <a href="./modding/scripting/state-substate-scripts.md">State/Substate Scripts</a>
         - <a href="./modding/scripting/global-scripts.md">Global Scripts</a>
-        - <a href="./modding/scripting/custom-options.md">Custom Options</a>
-        - <a href="./modding/scripting/scripted-assets-libraries.md">Scripted Assets Libraries</a>
         - <a href="./modding/scripting/shaders.md">Shaders</a>
-        - <a href="./modding/scripting/3d-rendering.md">3D rendering</a>
         - <a href="./modding/scripting/hxvlc.md">Using hxvlc for videos</a>
-        - <a href="./modding/scripting/script-snippets.md">Useful script snippets for modders</a>
-        - <a href="./modding/scripting/script-calls.md">All of the script calls</a>
+        - <a href="./modding/scripting/custom-options.md">Custom Options</a>
         - <a href="./modding/scripting/custom-classes.md">Custom Classes</a>
+        - <a href="./modding/scripting/3d-rendering.md">3D rendering</a>
+        - <a href="./modding/scripting/script-calls.md">All of the script calls</a>
+        - <a href="./modding/scripting/script-snippets.md">Useful script snippets for modders</a>
+        - <a href="./modding/scripting/scripted-assets-libraries.md">Scripted Assets Libraries</a>
         - <a href="./modding/scripting/ndll-scripting.md">NDLL Scripting</a>
         - <a href="./modding/scripting/custom-transitions.md">Custom Transitions</a>
     - <a href="./modding/hardcoding/">Hardcoding</a>
