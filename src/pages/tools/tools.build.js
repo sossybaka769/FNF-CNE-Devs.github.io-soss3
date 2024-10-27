@@ -1,10 +1,5 @@
-const { Remarkable } = require('remarkable');
-var path = require("path");
-var Mustache = require('mustache');
-var jsdom = require("jsdom");
 var fs = require('fs');
-var hljs = require('highlight.js');
-var { fixHtmlRefs, htmlToString, parseTemplate } = require("../../utils.js");
+var { fixHtmlRefs, htmlToString, parseTemplate, compileJs } = require("../../utils.js");
 
 var header = fs.readFileSync("./src/pages/templates/header.html", 'utf8')
 
@@ -19,6 +14,17 @@ const tools = [
 		link: "event-packer",
 		title: "Event Packer",
 		desc: "Tool to pack events for the engine"
+	},
+	{
+		link: "https://neeeoo.github.io/funkin-packer/",
+		title: "Funkin Packer",
+		desc: "Tool to pack and repack spritesheets",
+		external: true,
+	},
+	{
+		link: "psych-char-converter",
+		title: "Psych Character Converter",
+		desc: "Convert characters from Psych Engine to Codename Engine",
 	}
 ];
 
@@ -30,9 +36,12 @@ function buildHtml(_pageDir, _exportPath) {
 	}
 	console.log("Building Tools");
 
-	var diplayTools = tools.filter(tool => !tool.internal);
+	var displayTools = tools.filter(tool => !tool.internal);
 
 	for(const tool of tools) {
+		if(tool.external) {
+			continue;
+		}
 		var path = "./src/pages/tools/" + tool.link + "/index.html";
 		var outpath = exportPath + tool.link + "/index.html";
 		if(tool.link == "index") {
@@ -47,11 +56,18 @@ function buildHtml(_pageDir, _exportPath) {
 		if (!fs.existsSync(filePath)) {
 			fs.mkdirSync(filePath, {recursive: true});
 		}
+
+		if(fs.existsSync(path.replace(/\.html$/, ".js"))) {
+			var scriptPath = path.replace(/\.html$/, ".js");
+
+			compileJs(scriptPath, outpath.replace(/\.html$/, ".js"));
+		}
+
 		var templatePage = fs.readFileSync(path, 'utf8');
 		var vars = {
 			title: tool.title,
 			header: header,
-			tools: diplayTools
+			tools: displayTools
 		};
 		console.log(tool.link);
 

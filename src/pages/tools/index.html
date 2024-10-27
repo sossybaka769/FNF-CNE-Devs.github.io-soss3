@@ -41,8 +41,13 @@
 			<h1 style="text-align: center;">Tools</h1>
 			<div class="card-container">
 				{{#tools}}
-				<div class="card">
+				<div class="card{{#external}} external{{/external}}">
+					{{^external}}
 					<a href="./{{link}}/">
+					{{/external}}
+					{{#external}}
+					<a href="{{link}}" target="_blank">
+					{{/external}}
 						<h2>{{title}}</h2>
 						<p>{{desc}}</p>
 					</a>
