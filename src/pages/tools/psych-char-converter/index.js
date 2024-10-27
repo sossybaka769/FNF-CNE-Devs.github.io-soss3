@@ -159,116 +159,116 @@ function formatNumberRange(numbers, separator = ",") {
 
 var convertFolderButton = document.getElementById("convert-folder");
 convertFolderButton.addEventListener("change", function cFolder() {
-    const files = convertFolderButton.files;
+	const files = convertFolderButton.files;
 
-    var promises = [];
+	var promises = [];
 
-    function conve(file) {
-        return new Promise((resolve, reject) => {
-            var reader = new FileReader();
-            reader.onload = function(event) {
-                zip.file(file.name.replace('.json', '.xml'), convert(event.target.result));
-                //console.log('converted ' + file.name);
-                resolve("wiz really likes furries");
-            };
-            reader.readAsText(file);
-        });
-    }
+	function conve(file) {
+		return new Promise((resolve, reject) => {
+			var reader = new FileReader();
+			reader.onload = function(event) {
+				zip.file(file.name.replace('.json', '.xml'), convert(event.target.result));
+				//console.log('converted ' + file.name);
+				resolve("wiz really likes furries");
+			};
+			reader.readAsText(file);
+		});
+	}
 
-    var zip = new JSZip();
+	var zip = new JSZip();
 
-    const currDate = new Date();
-    const dateWithOffset = new Date(currDate.getTime() - currDate.getTimezoneOffset() * 60000);
-    JSZip.defaults.date = dateWithOffset;
+	const currDate = new Date();
+	const dateWithOffset = new Date(currDate.getTime() - currDate.getTimezoneOffset() * 60000);
+	JSZip.defaults.date = dateWithOffset;
 
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
+	for (let i = 0; i < files.length; i++) {
+		const file = files[i];
 
-        if (file.name.includes('.json')) {
-            promises.push(conve(file));
-        }
-    }
+		if (file.name.includes('.json')) {
+			promises.push(conve(file));
+		}
+	}
 
-    Promise.all(promises).then((values) => {
-        zip.generateAsync({type:"blob"}).then(function(content) {
-            saveBinaryFile(content, "characters.zip");
-        });
-    });
+	Promise.all(promises).then((values) => {
+		zip.generateAsync({type:"blob"}).then(function(content) {
+			saveBinaryFile(content, "characters.zip");
+		});
+	});
 });
 
 function std_parseInt() {
-    let v = parseInt(x);
-    if(isNaN(v)) {
-        return null;
-    }
-    return v;
+	let v = parseInt(x);
+	if(isNaN(v)) {
+		return null;
+	}
+	return v;
 }
 
 var colorMapping = {
-    "TRANSPARENT":0x00000000,
-    "WHITE":0xFFFFFFFF,
-    "GRAY":0xFF808080,
-    "BLACK":0xFF000000,
-    "GREEN":0xFF008000,
-    "LIME":0xFF00FF00,
-    "YELLOW":0xFFFFFF00,
-    "ORANGE":0xFFFFA500,
-    "RED":0xFFFF0000,
-    "PURPLE":0xFF800080,
-    "BLUE":0xFF0000FF,
-    "BROWN":0xFF8B4513,
-    "PINK":0xFFFFC0CB,
-    "MAGENTA":0xFFFF00FF,
-    "CYAN":0xFF00FFFF,
+	"TRANSPARENT":0x00000000,
+	"WHITE":0xFFFFFFFF,
+	"GRAY":0xFF808080,
+	"BLACK":0xFF000000,
+	"GREEN":0xFF008000,
+	"LIME":0xFF00FF00,
+	"YELLOW":0xFFFFFF00,
+	"ORANGE":0xFFFFA500,
+	"RED":0xFFFF0000,
+	"PURPLE":0xFF800080,
+	"BLUE":0xFF0000FF,
+	"BROWN":0xFF8B4513,
+	"PINK":0xFFFFC0CB,
+	"MAGENTA":0xFFFF00FF,
+	"CYAN":0xFF00FFFF,
 }
 
 var COLOR_REGEX = /^(0x|#)(([A-F0-9]{2}){3,4})$/i;
 function colorFromString(str) {
-    var result = null;
-    if (COLOR_REGEX.test(str)) {
-        var match = COLOR_REGEX.exec(str);
-        var hexColor = "0x" + match[2];
-        result = std_parseInt(hexColor);
-        if (hexColor.length == 8) {
-            result = result | 0xFF000000;
-        }
-    } else {
-        if (colorMapping.hasOwnProperty(str.toUpperCase())) {
-            result = colorMapping[str.toUpperCase()];
-        } else {
-            result = null;
-        }
-    }
+	var result = null;
+	if (COLOR_REGEX.test(str)) {
+		var match = COLOR_REGEX.exec(str);
+		var hexColor = "0x" + match[2];
+		result = std_parseInt(hexColor);
+		if (hexColor.length == 8) {
+			result = result | 0xFF000000;
+		}
+	} else {
+		if (colorMapping.hasOwnProperty(str.toUpperCase())) {
+			result = colorMapping[str.toUpperCase()];
+		} else {
+			result = null;
+		}
+	}
 
-    return result;
+	return result;
 }
 
 function hex(num, size) {
-    var s = num.toString(16);
-    while (s.length < size) {
-        s = "0" + s;
-    }
-    return s;
+	var s = num.toString(16);
+	while (s.length < size) {
+		s = "0" + s;
+	}
+	return s;
 }
 
 function fromRGBArray(arr) {
-    var r = arr[0];
-    var g = arr[1];
-    var b = arr[2];
-    return 0xFF000000 | (r << 16) | (g << 8) | b;
+	var r = arr[0];
+	var g = arr[1];
+	var b = arr[2];
+	return 0xFF000000 | (r << 16) | (g << 8) | b;
 }
 
 function toWebColor(color, Alpha=true, Prefix=true) {
-    var color = color | 0;
-    var alpha = (color >> 24) & 0xFF;
-    var red = (color >> 16) & 0xFF;
-    var green = (color >> 8) & 0xFF;
-    var blue = color & 0xFF;
-    var prefix = Prefix ? "#" : "";
-    if (Alpha && alpha < 255) {
-        return prefix + hex(alpha, 2) + hex(red, 2) + hex(green, 2) + hex(blue, 2);
-    }
-    return prefix + ((red << 16) | (green << 8) | blue).toString(16);
+	var color = color | 0;
+	var alpha = (color >> 24) & 0xFF;
+	var red = (color >> 16) & 0xFF;
+	var green = (color >> 8) & 0xFF;
+	var blue = color & 0xFF;
+	var prefix = Prefix ? "#" : "";
+	if (Alpha && alpha < 255) {
+		return prefix + hex(alpha, 2) + hex(red, 2) + hex(green, 2) + hex(blue, 2);
+	}
+	return prefix + ((red << 16) | (green << 8) | blue).toString(16);
 }
 
 
@@ -278,22 +278,22 @@ function convert(jsonInput) {
 	var xmlOutput = "<!DOCTYPE codename-engine-character>\n\t<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->\n<character";
 
 	if (json.no_antialiasing) xmlOutput +=" antialiasing=\"false\"";
-    if (json.image != null) {
-        if(json.image.startsWith("characters/")) {
-            json.image = json.image.replace("characters/", "");
-        }
-        xmlOutput += " sprite=\"" + json.image + "\"";
-    }
+	if (json.image != null) {
+		if(json.image.startsWith("characters/")) {
+			json.image = json.image.replace("characters/", "");
+		}
+		xmlOutput += " sprite=\"" + json.image + "\"";
+	}
 	if (json.position[0] !== 0) xmlOutput += " x=\"" + json.position[0] + "\"";
 	if (json.position[1] !== 0) xmlOutput += " y=\"" + json.position[1] + "\"";
 	// icon - healthicon
-    if (json.healthicon != null) {
-        xmlOutput += " icon=\"" + json.healthicon + "\"";
-    }
+	if (json.healthicon != null) {
+		xmlOutput += " icon=\"" + json.healthicon + "\"";
+	}
 	if (json.flip_x) xmlOutput += " flipX=\"true\"";
-    if (json.healthbar_colors != null) {
-        xmlOutput += " color=\"" + toWebColor(fromRGBArray(json.healthbar_colors)) + "\"";
-    }
+	if (json.healthbar_colors != null) {
+		xmlOutput += " color=\"" + toWebColor(fromRGBArray(json.healthbar_colors)) + "\"";
+	}
 	if (json.camera_position[0] !== 0) xmlOutput += " camx=\"" + json.camera_position[0] + "\"";
 	if (json.camera_position[1] !== 0) xmlOutput += " camy=\"" + json.camera_position[1] + "\"";
 	if (json.sing_duration !== 4) xmlOutput += " holdTime=\"" + json.sing_duration + "\"";
