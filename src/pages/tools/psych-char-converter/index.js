@@ -310,8 +310,8 @@ function convert(jsonInput) {
 
 	json.animations.forEach(function (a) {
 		xmlOutput += `\t<anim name="${a.anim}" anim="${a.name}"`;
-		var xOffset = roundDecimal(a.offsets[0] / scale, 3);
-		var yOffset = roundDecimal(a.offsets[1] / scale, 3);
+		var xOffset = a.offsets[0] / scale;//roundDecimal(a.offsets[0] / scale, 5);
+		var yOffset = a.offsets[1] / scale;//roundDecimal(a.offsets[1] / scale, 5);
 		var needsOffset = xOffset !== 0 || yOffset !== 0;
 		if (needsOffset)			xmlOutput += ` x="${xOffset}" y="${yOffset}"`;
 		if (a.fps !== 24)			xmlOutput += ` fps="${a.fps}"`;
