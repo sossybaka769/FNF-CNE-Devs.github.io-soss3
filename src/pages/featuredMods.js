@@ -1,3 +1,5 @@
+(function () {
+"use strict";
 function randomizeOrder() {
 	var mods = document.querySelectorAll(".featured-mod");
 	var parent = mods[0].parentNode;
@@ -124,7 +126,6 @@ function getRelativeTimeString(
 
 var lastUpdated = document.querySelectorAll(".last-updated");
 if(lastUpdated.length > 0 && window.Intl) {
-	const rtf1 = new Intl.RelativeTimeFormat('en', { style: 'short' });
 	lastUpdated.forEach(lastUpdated => {
 		var time = lastUpdated.getAttribute("data-time");
 		if(time != "unknown" && time != null && time != "unreleased") {
@@ -136,3 +137,4 @@ if(lastUpdated.length > 0 && window.Intl) {
 		}
 	});
 }
+})();

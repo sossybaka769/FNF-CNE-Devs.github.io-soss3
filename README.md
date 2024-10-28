@@ -18,3 +18,6 @@ npm run build
 ```
 
 This will compile the docs and place them in the ``export`` folder.
+
+
+https://www.timestamp-converter.com/ Use this to get the time in ISO 8601 format.

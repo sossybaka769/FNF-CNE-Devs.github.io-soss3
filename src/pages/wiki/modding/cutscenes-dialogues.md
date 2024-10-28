@@ -1,14 +1,21 @@
+---
+author: Frakits & Nex_isDumb
+desc: How to make cutscenes and dialogues.
+lastUpdated: 2024-10-14T13:24:55.501Z
+title: Cutscenes and Dialogues
+---
 # Cutscenes and dialogues.
 
-## Cutscenes
+## <h2 id="cutscenes">Cutscenes</h2>
 
 Making Cutscenes is easy, either drop an .mp4 file in ``./videos`` with the name of the song followed by `-cutscene` at the end, or drop it in the corresponding song folder and simply name it ``cutscene.mp4``
 
 <img src="./Cutscenes or Dialogues.png"/>
 
-You can also put an ``-end`` before ``-cutscene`` to make that cutscene appear at the end of the song.
+You can also put an ``-end`` before ``-cutscene`` to make that cutscene appear at the end of the song.<br>
+Starting them manually with also a custom prefix is also possible, check the <a href="./scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a> page.
 
-## Dialogues
+## <h2 id="dialogues">Dialogues</h2>
 
 Codename Engine also supports Dialogues, though there's a lot to unwrap here, so please read with patience.
 
@@ -51,10 +58,10 @@ As for the <syntax lang="xml">&lt;line&gt;</syntax> node, the example shows it's
 - ``callback`` determines what function to call in a Dialogue Script *(see <a href="./scripting/playstate-scripts/cutscenes-dialogue-scripts.md">Cutscenes/Dialogue Scripts</a>)*
 - ``changeDefAnim`` to play a different animation for the character *(<code class="inline-syntax"><span class="hljs-attr">changeDefAnim</span>=<span class="hljs-string">"scared"</span></code>)*.
 - ``speed`` is the typing speed *(default is <code class="hljs-string">0.05</code>)*.
-- ``musicVolume`` changes the music volume *(default is <code class="hljs-string">0.8</code>)*
+- ``musicVolume`` changes the music volume *(default is <code class="hljs-string">0.8</code>)*.
 - ``changeMusic`` determines what song to change to.
-- ``playSound`` is the sound that plays once you proceed to the next line.
-- ``nextSound`` also plays a sound once you proceed to the next line. *(I really can't figure out why this exists)*
+- ``playSound`` plays a sound on the same line *(so yes, you can also play a sound at the same time the dialogue starts)*.
+- ``nextSound`` changes the sound of whenever you proceed to the next line.
 
 The <syntax lang="xml">&lt;line&gt;</syntax> node also accepts <syntax lang="xml">&lt;format&gt;</syntax> children, to format different parts of the text. The parameters are:
 - ``color`` for coloring.

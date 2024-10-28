@@ -1,3 +1,9 @@
+---
+author: Frakits & Swordcube
+desc: This page explains how to create custom options for your mod!
+lastUpdated: 2024-09-11T09:27:20.000Z
+title: Custom Options
+---
 # Custom Options
 You may find it useful to have custom options specific to your mod, thankfully you can do just that!
 
@@ -34,7 +40,7 @@ All option types (except for <syntax lang="xml">&lt;menu&gt;</syntax>) share 2 c
 - `id` - The ID of the option to pull from save data (which we cover just below this section!)
 - `name` - This is the name of the option displayed on screen
 
-## Here's what the properties for each type are:
+## <h2 id="properties" sidebar="Properties">Here's what the properties for each type are:</h2>
 
 - <syntax lang="xml">&lt;menu&gt;</syntax> - A menu to put your options into, you can have sub-menus inside of them as well
     - `name` - This is the name of the menu displayed on screen

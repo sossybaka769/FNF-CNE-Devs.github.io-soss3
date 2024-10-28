@@ -1,8 +1,14 @@
+---
+author: Frakits
+desc: This page explains how to create character/stage scripts
+lastUpdated: 2024-09-02T18:14:26.000Z
+title: Character/Stage Scripts
+---
 # Character/Stage Scripts
 
 Character/Stage Scripts run alongside them, or something like that.
 
-## Character Script.
+## <h2 id="character-scripts">Character Scripts</h2>
 You can create one of those by making a Script file alongside your character's XML data file *(``./data/characters/``)*<br>
 In these scripts you don't need to specify the character, since the character becomes the Script's parent.
 
@@ -13,7 +19,7 @@ function update(elapsed) {
 }
 ```
 
-## Stage Scripts.
+## <h2 id="stage-scripts">Stage Scripts</h2>
 Creating one of those also goes next to the Stage XML data file *(``./data/stages/``)*.<br>
 This script also takes the Stage as it's parent, thus not needing to use <syntax lang="haxe">stage.getSprite()</syntax>, instead, sprites becomes the variables
 

@@ -1,3 +1,9 @@
+---
+author: Ne_Eo & Frakits
+desc: This page explains how to create custom classes for your mod!
+lastUpdated: 2024-09-11T09:37:50.000Z
+title: Custom Classes
+---
 # Custom Classes
 
 Custom classes can be made either inside the script you need it in or you can make a script file corresponding with the name of the class in ``./source``, and using <syntax lang="haxe">import</syntax> to import it.

@@ -3,34 +3,70 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Event Packer - Codename Engine Tools</title>
 	<link rel="stylesheet" href="root/style.css">
+	<link rel="stylesheet" href="root/tools.css">
+	<title>Event Packer - Codename Engine Tools</title>
+
+	<meta name="title" content="Event Packer - Codename Engine Tools" />
+	<meta name="keywords" content="codename engine, codename, engine, game, modding, mods, website, documentation, wiki, tools, tool, codenameengine, cne, funkin, fnf, fnf engine, fnf engines, friday night funkin, gamebanana fnf, event packer, event converter, event generator, event generator" />
+
+	<meta name="description" content="Pack the files for a event into a small file" />
+	<meta property="og:description" content="Pack the files for a event into a small file" />
+	<meta property="twitter:description" content="Pack the files for a event into a small file" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://codename-engine.com/" />
+	<meta property="og:title" content="Event Packer - Codename Engine Tools" />
+	<meta property="og:image" content="https://codename-engine.com/img/banner.png" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://codename-engine.com/" />
+	<meta property="twitter:title" content="Event Packer - Codename Engine Tools" />
+	<meta property="twitter:image" content="https://codename-engine.com/img/banner.png" />
+
+	<meta name="theme-color" content="#7f33b8">
+
+	<link rel="icon" href="root/favicon.ico" type="image/x-icon"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="root/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="root/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="root/favicon-16x16.png">
+	<link rel="manifest" href="root/site.webmanifest">
 </head>
-<body>
+<body class="event-packer">
 	<div class="header">
 		{{ header }}
 	</div>
 	<div class="container">
-		<form>
-			<div>
-				<label for="event-file">Event File (.hx/.hscript/.hxs/.hsc)</label>
-				<input type="file" id="event-file" file="event-file" placeholder="Event File">
-			</div>
+		<div class="content">
+			<h1 style="text-align: center;">Event Packer</h1>
+			<form>
+				<div class="inputs">
+					<div class="file-input">
+						<label for="event-file">Event File (.hx/.hscript/.hxs/.hsc)<span class="required">*</span>
+							<input type="file" id="event-file" file="event-file" placeholder="Event File" required accept=".hx,.hscript,.hxs,.hsc">
+						</label>
+					</div>
 
-			<div>
-				<label for="event-params">Event Params (.json)</label>
-				<input type="file" id="event-params" file="event-params" placeholder="Event Params">
-			</div>
+					<div class="file-input">
+						<label for="event-params">Event Params (.json)<span class="required">*</span>
+							<input type="file" id="event-params" file="event-params" placeholder="Event Params" required accept=".json">
+						</label>
+					</div>
 
-			<div>
-				<label for="event-image">Event Icon (.png)</label>
-				<input type="file" id="event-image" file="event-image" placeholder="Event Icon">
-			</div>
+					<div class="file-input">
+						<label for="event-image">Event Icon (.png)
+							<input type="file" id="event-image" file="event-image" placeholder="Event Icon" accept=".png">
+						</label>
+					</div>
+				</div>
 
-			<div>
-				<button type="submit">Pack</button>
-			</div>
-		</form>
+				<div class="submit-button">
+					<button type="submit">Pack</button>
+				</div>
+			</form>
+		</div>
 	</div>
 
 	<script>
@@ -60,7 +96,7 @@ form.addEventListener("submit", function (e) {
 				imageDataURL
 			].join(separator);
 
-			saveFile(packText, eventFile.name.replace(/.(hx|hscript|hxs|hsc)$/, ".pack"));
+			saveFile(packText, eventFile.name.replace(/\.(hx|hscript|hxs|hsc)$/, ".pack"));
 		})
 		.catch(error => console.error("Error processing files:", error));
 });

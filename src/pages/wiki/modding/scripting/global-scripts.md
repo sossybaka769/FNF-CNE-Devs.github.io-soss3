@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to use Global Scripts
+lastUpdated: 2024-08-31T12:09:41.000Z
+title: Global Scripts
+---
 # Global Scripts
 Global Scripts always run during the game, doesn't matter in which state or where, it always runs. *(runs from when the mod is loaded/game opened up until the game is closed/different mod is loaded)*<br>
 You can make one by creating a file in ``./data/`` called ``global.hx``

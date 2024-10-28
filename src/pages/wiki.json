@@ -2,6 +2,8 @@
     ["index", "Home"],
     ["navigation", "How to navigate the engine"],
     ["differences", "Differences between other FNF engines"],
+    ["faq", "FAQ"],
+    ["troubleshooting", "Troubleshooting"],
     ["modding/index", "Modding The Engine", [
         ["songs/index", "Creating songs", [
             ["editor-features", "Chart Editor Features"]
@@ -9,7 +11,7 @@
         ["characters/index", "Creating characters", [
             ["editor-features", "Character Editor Features - UNFINISHED"]
         ]],
-        ["stages/index", "Creating stages", [
+        ["stages/index", "Creating Stages", [
             ["stage-extensions", "Stage Extensions - UNFINISHED"]
         ]],
         ["cutscenes-dialogues", "Cutscenes/Dialogues"],
@@ -18,7 +20,7 @@
             ["playstate-scripts/index", "PlayState Scripts", [
                 ["gameplay-scripts", "Gameplay Scripts"],
                 ["events-notetypes-scripts", "Events/Notetype Scripts"],
-                ["cutscenes-dialogue-scripts", "Cutscenes/Dialogue Scripts - UNFINISHED"],
+                ["cutscenes-dialogue-scripts", "Cutscenes/Dialogue Scripts"],
                 ["character-stage-scripts", "Character/Stage Scripts"],
                 ["pause-gamover-scripts", "Pause/Game Over Scripts"]
             ]],

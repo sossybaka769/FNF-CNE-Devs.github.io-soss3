@@ -1,3 +1,8 @@
+---
+desc: This page contains useful script snippets for modders
+lastUpdated: 2024-09-02T18:14:26.000Z
+title: Script Snippets
+---
 # Useful script snippets for modders
 Some features don't exist in our engine, luckily, we can script them in!
 
@@ -19,6 +24,8 @@ function preStateSwitch() {
             FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
 }
 ```
+
+<!--
 ## Animated Icons support.
 ```haxe
 function update(elapsed) {
@@ -39,5 +46,6 @@ function onHealthIconAnimChange(e) {
     }
 }
 ```
+-->
 
 ## to be filled with other snippets

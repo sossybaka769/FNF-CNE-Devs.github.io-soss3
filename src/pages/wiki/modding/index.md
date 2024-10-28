@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: How to mod the engine.
+lastUpdated: 2024-09-20T15:19:41.000Z
+title: Modding The Engine
+---
 # Modding The Engine
 
 To start modding the engine, you simply make a folder in ``./mods``. It's really that simple, as making a mod does not require any setup.
@@ -133,7 +139,7 @@ And when you're done with the basic steps you're finally ready for release, or i
 - <a href="./scripting/scripted-assets-libraries.md">Scripted Assets Libraries</a>
 - <a href="./scripting/ndll-scripting.md">NDLL Scripting</a>
 
-## Config
+## <h2 id="config" sidebar="Config">Config</h2>
 
 Some config is still required for things like Discord RPC. so we're gonna get over them here.<br>
 All of these configs can be found in ``./data/config/``
@@ -145,7 +151,8 @@ All of these configs can be found in ``./data/config/``
 	"logoKey": "icon"
 }
 ```
-Before doing this, make sure to make a discord application at https://discord.com/developers/applications, if you don't know how... please search for a guide on google. After that, copy the application ID and insert it there.
+Before doing this, make sure to make a discord application at [https://discord.com/developers/applications](https://discord.com/developers/applications), if you don't know how... please search for a guide on google. After that, copy the application ID and insert it there.
+
 ### credits.xml
 Crediting people also uses XML data to parse members, though it has a lot of features to cover.<br>
 Here's a template provided by the engine:
@@ -161,7 +168,7 @@ Here's a template provided by the engine:
 As you can see, there's 2 types of nodes: <syntax lang="xml">&lt;credit&gt;</syntax> and <syntax lang="xml">&lt;github&gt;</syntax>. <syntax lang="xml">&lt;credit&gt;</syntax> is the basic crediting node which can be applied to anyone, and <syntax lang="xml">&lt;github&gt;</syntax> pulls the user from it's database and can only be used for people who have accounts on GitHub *(also automatically redirects to their GitHub profile page.)*
 
 Their parameters are as follows:
-- <syntax lang="xml">&lt;credit&gt;</syntax> <!-- applies special coloring -->
+- <syntax lang="xml">&lt;credit&gt;</syntax>
     - ``name`` which is the name of the person.
     - ``desc`` determines the description of that person.
     - ``icon`` determines which PNG file to pick from ``./images/credits``.

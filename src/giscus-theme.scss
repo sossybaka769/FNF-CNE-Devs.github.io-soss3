@@ -120,5 +120,7 @@ button:hover:not(button:disabled) {
 }
 
 .gsc-comment img {
-    max-width: 50% !important;
+    //max-width: 75% !important;
+    width: 25px;
+    margin-right: 0.5em;
 }

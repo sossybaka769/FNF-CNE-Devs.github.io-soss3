@@ -8,18 +8,23 @@
   },
   "scripts": {
     "build": "node ./src/index.js",
+    "build:full": "node ./src/index.js --full",
     "watch": "node ./src/index.js --watch"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@jvitela/mustache-wax": "^1.0.4",
+    "gray-matter": "^4.0.3",
     "highlight.js": "^11.10.0",
-    "jsdom": "^25.0.0",
+    "jsdom": "^25.0.1",
     "mustache": "^4.2.0",
     "remarkable": "^2.0.1"
   },
   "devDependencies": {
-    "sass": "^1.79.1"
+    "clean-css": "^5.3.3",
+    "sass": "^1.80.4",
+    "uglify-js": "^3.19.3"
   }
 }

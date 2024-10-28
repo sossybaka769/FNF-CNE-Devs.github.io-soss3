@@ -1,6 +1,12 @@
+---
+author: Frakits
+desc: This page explains how to use Events/Notetype Scripts in your mod!
+lastUpdated: 2024-08-29T14:15:47.000Z
+title: Events/Notetype Scripts
+---
 # Events/Notetype Scripts
 
-## Events
+## <h2 id="events">Events</h2>
 Events can be found in ``./data/events``. There's currently 3 files used for events: a script file, a JSON file to determine the parameters of it, and an image file for it's icon. *(they all need to have the same name as the event)*
 
 First, we'll go over making the JSON file. The JSON file holds all parameters required for the Event, and each parameter can have different types. Each parameter type is listed here:
@@ -75,7 +81,7 @@ For the icon, place a *(preferably 16x16)* image in the same directory as the ev
 
 *Write about .pack files later*
 
-## Note types
+## <h2 id="notetypes">Note types</h2>
 Making note types only consists of 2 files: the script file and the note sprites.
 
 Putting the sprites in ``./images/game/notes`` and naming them after the note type name will automatically replace the default note sprites with those.

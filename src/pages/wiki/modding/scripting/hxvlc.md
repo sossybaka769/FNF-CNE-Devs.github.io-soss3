@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to play videos using hxvlc
+lastUpdated: 2024-09-01T14:39:03.000Z
+title: Using hxvlc for videos
+---
 # Using hxvlc for videos
 
 Using hxvlc, you can display videos anywhere, and can be used as a sprite as well.
@@ -8,6 +14,7 @@ To get started, you get 2 choices:
 
 Using an FlxVideo looks something like this:
 ```haxe
+import hxvlc.flixel.FlxVideo;
 var video:FlxVideo = new FlxVideo();
 video.onEndReached.add(function():Void
 {
@@ -22,6 +29,7 @@ if (video.load(Paths.video("video")))
 ```
 And using an FlxVideoSprite looks like this:
 ```haxe
+import hxvlc.flixel.FlxVideoSprite;
 var video:FlxVideoSprite = new FlxVideoSprite(0, 0);
 video.antialiasing = true;
 video.bitmap.onFormatSetup.add(function():Void

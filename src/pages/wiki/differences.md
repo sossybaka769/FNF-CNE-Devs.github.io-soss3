@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains the differences between the other FNF engines.
+lastUpdated: 2024-09-18T14:11:35.000Z
+title: Differences between the other FNF engines
+---
 # Differences between the other FNF engines.
 
 ### First of all, **this engine does not have built-in LUA scripting**, unlike <a href="https://github.com/ShadowMario/FNF-PsychEngine">Psych Engine</a>.

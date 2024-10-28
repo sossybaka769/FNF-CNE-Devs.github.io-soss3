@@ -1,4 +1,10 @@
-# Creating stages
+---
+author: Frakits & Ne_Eo & Nex_isDumb
+desc: How to make custom stages.
+lastUpdated: 2024-09-20T15:19:41.000Z
+title: Creating Stages
+---
+# Creating Stages
 Stages are defined via XML files, similar to <a href="../characters/">Creating characters</a>. By creating an XML file in ``./data/stages``, you officially created a stage.
 
 The default stage XML looks something like this:
@@ -28,7 +34,7 @@ As for the other nodes, there's about *7 types* of them *(and more if you script
 
 *(note that it's important which order you put them in because they will take the same order in-game too)*
 
-## Sprite node (<syntax lang="xml">&lt;sprite&gt;</syntax>, <syntax lang="xml">&lt;spr&gt;</syntax>, <syntax lang="xml">&lt;sparrow&gt;</syntax>)
+## <h2 id="sprite-node" sidebar="Sprite node">Sprite node (<syntax lang="xml">&lt;sprite&gt;</syntax>, <syntax lang="xml">&lt;spr&gt;</syntax>, <syntax lang="xml">&lt;sparrow&gt;</syntax>)</h2>
 The sprite node defines the basic sprites in a stage.
 
 ```xml
@@ -78,7 +84,7 @@ Defining advanced properties is also possible. Like this:
 </sprite>
 ```
 
-## Solid node (<syntax lang="xml">&lt;solid&gt;</syntax>, <syntax lang="xml">&lt;box&gt;</syntax>)
+## <h2 id="solid-node" sidebar="Solid node">Solid node (<syntax lang="xml">&lt;solid&gt;</syntax>, <syntax lang="xml">&lt;box&gt;</syntax>)</h2>
 Solid nodes are sprites that is, unlike a Sprite Node, composed of only one select color. This node has less parameters since it doesn't use images. <br>
 Creating one of these looks something like this:
 
@@ -93,7 +99,7 @@ Accepted parameters:
 - `x` and `y` determine the position in the stage.
 - `width` and `height` defines the size of the solid/box.
 
-## Character nodes (<syntax lang="xml">&lt;boyfriend&gt;</syntax>, <syntax lang="xml">&lt;bf&gt;</syntax>, <syntax lang="xml">&lt;player&gt;</syntax>, <syntax lang="xml">&lt;girlfriend&gt;</syntax>, <syntax lang="xml">&lt;gf&gt;</syntax>, <syntax lang="xml">&lt;dad&gt;</syntax>, <syntax lang="xml">&lt;opponent&gt;</syntax>, <syntax lang="xml">&lt;character&gt;</syntax>, <syntax lang="xml">&lt;char&gt;</syntax>)
+## <h2 id="character-node" sidebar="Character nodes">Character nodes (<syntax lang="xml">&lt;boyfriend&gt;</syntax>, <syntax lang="xml">&lt;bf&gt;</syntax>, <syntax lang="xml">&lt;player&gt;</syntax>, <syntax lang="xml">&lt;girlfriend&gt;</syntax>, <syntax lang="xml">&lt;gf&gt;</syntax>, <syntax lang="xml">&lt;dad&gt;</syntax>, <syntax lang="xml">&lt;opponent&gt;</syntax>, <syntax lang="xml">&lt;character&gt;</syntax>, <syntax lang="xml">&lt;char&gt;</syntax>)</h2>
 Character nodes are used to position characters in the stage. A Character node looks something like this:
 ```xml
 <boyfriend x="200" y="400"/>
@@ -119,14 +125,14 @@ Keep in mind that where you put these nodes is important as the character will b
 ```
 *(this will put boyfriend behind the <code class="hljs-string">stageCurtains</code> sprite)*
 
-## Ratings sprites node (<syntax lang="xml">&lt;ratings&gt;</syntax>, <syntax lang="xml">&lt;combo&gt;</syntax>)
+## <h2 id="ratings-node" sidebar="Rating sprites node">Ratings sprites node (<syntax lang="xml">&lt;ratings&gt;</syntax>, <syntax lang="xml">&lt;combo&gt;</syntax>)</h2>
 This node is only used to position the rating sprites and does nothing else *(atm)*. Positioning in nodes doesn't matter here.
 ```xml
 <ratings x="200" y="400">
 ```
 The only parameters are ``x`` and ``y``.
 
-## Stage Extensions (<syntax lang="xml">&lt;use-extension&gt;</syntax>, <syntax lang="xml">&lt;extension&gt;</syntax>, <syntax lang="xml">&lt;ext&gt;</syntax>)
+## <h2 id="stage-extensions" sidebar="Stage Extensions">Stage Extensions (<syntax lang="xml">&lt;use-extension&gt;</syntax>, <syntax lang="xml">&lt;extension&gt;</syntax>, <syntax lang="xml">&lt;ext&gt;</syntax>)</h2>
 
 ```xml
 <use-extension script="example" />

@@ -12,6 +12,10 @@
 2. **Allowed Mods**
    Only **Codename Engine mods** are allowed. Mods pull requests that do not adhere to this standard will not be accepted.
 
+   We don't wish to have ports of mods that were originally made for another engine, unless they are uploaded by the original author.
+
+   **Note:** We don't allow mods that contain piracy or illegal content. If you have any questions, please ask in the [Discord Server](https://discord.gg/WTzm35kekB).
+
 3. **Download Links**
    Providing a full build download link is **discouraged**. Please refrain from including direct links to full builds. Unless your mod is a **hardcoded Codename Engine mod**.
 
@@ -31,6 +35,7 @@
 7. Unreleased mods
    - If your mod is **not yet released**, you must set the `version` field to `"unreleased"`.
    - and add the tag `"upcoming"` to your `meta.json` file for proper categorization.
+   - You also need to set the `lastUpdated` field to `"unreleased"`.
 
 8. Correct timestamps
    - If your mod is **not yet released**, you must set the `lastUpdated` field to `"unreleased"`.
@@ -43,18 +48,21 @@
 9. Tags
    - Only moderators can add these specific tags to mods.
        - `featured` - Mods that are featured on the website.
-       - `best` - Mods that are the best of all time.
+       - `loved` - Mods that are loved by the community.
+       - `admin-pick` - Mods that got picked by a moderator.
 
    - Here's a list of tags that are allowed:
        - `softcoded` - Use this if your mod is a **softcoded Codename Engine mod**.
        - `hardcoded` - Use this if your mod is a **hardcoded Codename Engine mod**.
        - `long-desc` - Use this if your mod has a long description. (sizes it down)
        - `longer-desc` - Use this if your mod has a longer description. (sizes it down even more)
+       - `longerer-desc` - Use this if your mod has a longerer description. (sizes it down even more)
        - `long-title` - Use this if your mod has a long title. (sizes it down)
        - `longer-title` - Use this if your mod has a longer title. (sizes it down even more)
        - `upcoming` - Use this if your mod is **not yet released**.
-       - `best` - [Only moderators] Use this if your mod is the **best of all time**.
-       - `featured` - [Only moderators] Use this if your mod is **featured on the website**.
+       - `loved` - **[Only moderators]** This means a mod is loved by the community. This is if the mod has the gold star on GameBanana.
+       - `featured` - **[Only moderators]** Use this if your mod is **featured on the website**.
+       - `admin-pick` - **[Only moderators]** This means a mod got picked by a moderator.
 
        - `difficulty-easy` - Use this if your mod is **easy**.
        - `difficulty-normal` - Use this if your mod is **normal**.
@@ -66,5 +74,5 @@
        - `length-long` - Use this if your mod is **long**.
        - `length-very-long` - Use this if your mod is **very long**.
 
-   - If you have custom tags that will be used when we add searching. add them to "userTags" in `meta.json`.
+   - If you have custom tags that will be used when we add searching. add them to `"userTags": []` in `meta.json`.
 ### Thank you for your contribution!

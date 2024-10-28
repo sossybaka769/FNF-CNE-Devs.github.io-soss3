@@ -1,3 +1,9 @@
+---
+author: Frakits & Ne_Eo & Nex_isDumb
+desc: This page explains how to create characters for your mod!
+lastUpdated: 2024-09-23T07:49:54.000Z
+title: Creating Characters
+---
 # Creating Characters
 
 Creating characters thru the engine is not available yet, so you have to manually add the files yourself.<br>
@@ -40,7 +46,7 @@ As for the <syntax lang="xml">&lt;anim&gt;</syntax> nodes, they're pretty self-e
 - ``forced`` whether or not to force animation playback while a different one is already playing.
 - ``loop`` to make your animation loop.
 
-## Health Icons
+## <h2 id="health-icons">Health Icons</h2>
 
 In this engine, health icons have a bit more functionality than the ordinary engine. Such as:
 

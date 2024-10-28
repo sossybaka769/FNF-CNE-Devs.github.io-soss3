@@ -1,8 +1,14 @@
+---
+author: Frakits
+desc: How to use the chart editor.
+lastUpdated: 2024-09-18T14:25:17.000Z
+title: Additional Chart Editor Features
+---
 # Additional Chart Editor Features
 
 while we have only covered the basic of charting in <a href="../songs/">Creating songs</a>, we will cover the additional chart editor features here, in no particular order.
 
-## Strumlines.
+## <h2 id="strumlines">Strumlines</h2>
 ### More than 2.
 Songs in Codename Engine are more modular, in the sense that you're no longer restricted to just 2 strumlines. This means that, you can have as many strumlines and characters in the song as you like. Moreover, Girlfriend also gets her own strumline.
 
@@ -15,6 +21,7 @@ This is only an in-editor thing, but if you don't like how the Strumlines are or
 
 ### Hitsounds
 Pretty self explanatory, but you get to choose which Strumline should play a Hitsound when you get past a Note.
+(This only applies in the chart editor, not during gameplay)
 
 <img src="./Chart Editor Features-1.png"/>
 
@@ -45,7 +52,7 @@ For this, you have to obviously have different vocal audio files ready, with a s
 <img src="./Chart Editor Features-16.png"/>
 <img src="./Chart Editor Features-15.png"/>
 
-## Events & Notetypes.
+## <h2 id="events-notetypes">Events & Notetypes</h2>
 ### Events
 Events exist in the Chart Editor to avoid coding a lot of code for just a few events. Some of them are already built-in but you can also code your own *(see <a href="../scripting/playstate-scripts/events-notetypes-scripts.md">Events/Notetype Scripts</a>)*.
 
@@ -70,7 +77,7 @@ You can code your own note types, or use the pre-existing one *(though only 2 ex
 
 You can also change the graphic of a Note type without programming, by putting the Note type's spritesheet in ``images/game/notes``.
 
-## Changing additional chart/meta data.
+## <h2 id="meta-data" sidebar="Changing Metadata">Changing additional chart/meta data</h2>
 
 <img src="./Chart Editor Features-12.png"/>
 
@@ -88,7 +95,7 @@ Editing chart data has only 2 options, and they're self explanatory.
 
 Editing metadata information, is also self-explanatory, though you can notice this menu is similar to what you've seen in <a href="../songs/">Creating songs</a>, so this should be easy to figure out. Though you might also notice there's a new option, **Custom Values**. These are extra values that let's you set certain values specifically for the song *(for example, crediting someone for a song)*. This will be covered in <a href="../scripting/playstate-scripts/gameplay-scripts.md">Gameplay Scripts</a>.
 
-## Saving.
+## <h2 id="saving">Saving your chart</h2>
 
 The chart editor allows for multiple ways to save a chart. Currently, there's about 10 ways to save the information of a chart.
 
@@ -99,4 +106,4 @@ We know what the first option does, but what about those other ones? Well, here'
 - **Save Events Separately** saves the events in a separate file, which gets parsed on any difficulty chart you play on. *(Note that if you used this you have to also use **Save Without Events**, otherwise you will face issues with duplicate events)*
 - **Save Meta** saves the meta into a separate file.
 - **Export For FNF Legacy** saves the chart in a format that is supported by other FNF engines.
-- **Save For Psych Engine** saves the chart specifically in Psych Engine's format.
+- **Export For Psych Engine** saves the chart specifically in Psych Engine's format.

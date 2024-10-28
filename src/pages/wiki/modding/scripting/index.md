@@ -1,3 +1,9 @@
+---
+author: Frakits
+desc: This page explains how to script the engine
+lastUpdated: 2024-09-05T18:06:23.000Z
+title: Scripting
+---
 # Scripting
 
 The engine's biggest feature yet, scripting.<br>
@@ -7,12 +13,12 @@ Scripting can change not only gameplay, but also menus and other engine function
 We will focus on writing in HScript, so whenever you have to create a script, the filename has to end with an ``.hx``.<br>
 *(you can also use ``.hscript``, ``.hxc`` and ``.hxs``)*
 
-### Scripting relies heavily on having a console opened at all times.
+## <h2 id="console" sidebar="Using console for debug">Scripting relies heavily on having a console opened at all times.</h2>
 The console helps you track down errors and bugs with your script. To access it, you can either:
 - Press F2 to open a window, or
 - Start the game in a cmd or powershell window (or in terminal for linux/mac users)
 
-### Our HScript accepts special syntax from Haxe 4.3.x
+## <h2 id="special-syntax" sidebar="Special Syntax">Our HScript accepts special syntax from Haxe 4.3.x</h2>
 Things like ``?.``, ``??`` and ``??=`` are accepted in our HScript language.<br>
 Using those is beneficial as they prove to be very useful to keeping your code clean.<br>
 Example usage:
@@ -34,7 +40,7 @@ if (FlxG.save.data.isOpen == null) FlxG.save.data.isOpen = true;
 FlxG.save.data.isOpen ??= true;
 ```
 
-### Script events.
+## <h2 id="events">Script Events</h2>
 
 Scripting relies heavily on **Events**, which triggers callbacks and returns a struct of parameters, basically unclogging the parameter list of functions.<br>
 Which means, handling a note hit looks something like this:
@@ -50,7 +56,7 @@ You can find them all in <a href="./script-calls.md">All of the script calls</a>
 
 Despite all of that, functions like <code class="hljs-title">update</code>, <code class="hljs-title">beatHit</code>, <code class="hljs-title">stepHit</code> still receive one parameter *(<syntax lang="haxe">elapsed:Float</syntax>, <syntax lang="haxe">curBeat:Int</syntax>, <syntax lang="haxe">curStep:Int</syntax>)*
 
-### Class importing.
+## <h2 id="class-importing">Importing Classes</h2>
 
 Some classes are pre-imported (<syntax lang="haxe">FlxSprite</syntax>, <syntax lang="haxe">FlxMath</syntax>, <syntax lang="haxe">FlxAxis</syntax> etc.), but for classes that aren't pre-imported, it's still possible to import like this:
 ```haxe

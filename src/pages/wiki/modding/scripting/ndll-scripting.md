@@ -1,3 +1,8 @@
+---
+desc: This page explains how to use NDLLs
+lastUpdated: 2024-09-10T12:35:22.000Z
+title: NDLL Scripting
+---
 # NDLL Scripting
 
 Not documented yet.
