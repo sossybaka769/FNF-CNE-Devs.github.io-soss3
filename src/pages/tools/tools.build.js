@@ -25,6 +25,12 @@ const tools = [
 		link: "psych-char-converter",
 		title: "Psych Character Converter",
 		desc: "Convert characters from Psych Engine to Codename Engine",
+	},
+	{
+		link: "https://tools.rotato.app/compress",
+		title: "Video Compressor",
+		desc: "Compress videos to reduce their size<br>(Warning: this is not a lossless compression)",
+		external: true,
 	}
 ];
 

@@ -21,19 +21,19 @@
     }
   }
 
-  &.external::before {
+  &.external h2::after {
     content: " ";
-    background-image: url("img/external-icon.png");
+    background-image: url("img/external-icon.svg");
     background-size: contain;
     background-repeat: no-repeat;
     image-rendering: pixelated;
     display: inline-block;
     width: 16px;
     height: 16px;
-    //margin-left: 0.5em;
-    position: absolute;
-    top: 4px;
-    right: 4px;
+    margin-left: 0.4em;
+    //position: absolute;
+    //top: 4px;
+    //right: 4px;
   }
 }
 
