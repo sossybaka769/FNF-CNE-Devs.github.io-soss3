@@ -265,10 +265,15 @@ function toWebColor(color, Alpha=true, Prefix=true) {
 	var green = (color >> 8) & 0xFF;
 	var blue = color & 0xFF;
 	var prefix = Prefix ? "#" : "";
-	if (Alpha && alpha < 255) {
-		return prefix + hex(alpha, 2) + hex(red, 2) + hex(green, 2) + hex(blue, 2);
-	}
-	return prefix + ((red << 16) | (green << 8) | blue).toString(16);
+	return prefix + (Alpha ? hex(alpha, 2) : "") + hex(red, 2) + hex(green, 2) + hex(blue, 2);
+	//if (Alpha) {
+	//	return prefix + hex(alpha, 2) + hex(red, 2) + hex(green, 2) + hex(blue, 2);
+	//}
+	//return prefix + hex(red, 2) + hex(green, 2) + hex(blue, 2);
+}
+
+function convertRGBArrayToHex(color) {
+	return "#" + hex(color[0], 2) + hex(color[1], 2) + hex(color[2], 2);
 }
 
 
@@ -277,39 +282,32 @@ function convert(jsonInput) {
 
 	var xmlOutput = "<!DOCTYPE codename-engine-character>\n\t<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->\n<character";
 
-	if (json.no_antialiasing) xmlOutput +=" antialiasing=\"false\"";
+	if (json.no_antialiasing) xmlOutput += " antialiasing=\"false\"";
 	if (json.image != null) {
 		if(json.image.startsWith("characters/")) {
 			json.image = json.image.replace("characters/", "");
 		}
-		xmlOutput += " sprite=\"" + json.image + "\"";
+		xmlOutput += ` sprite="${json.image}"`;
 	}
-	if (json.position[0] !== 0) xmlOutput += " x=\"" + json.position[0] + "\"";
-	if (json.position[1] !== 0) xmlOutput += " y=\"" + json.position[1] + "\"";
-	// icon - healthicon
-	if (json.healthicon != null) {
-		xmlOutput += " icon=\"" + json.healthicon + "\"";
-	}
-	if (json.flip_x) xmlOutput += " flipX=\"true\"";
-	if (json.healthbar_colors != null) {
-		xmlOutput += " color=\"" + toWebColor(fromRGBArray(json.healthbar_colors)) + "\"";
-	}
-	if (json.camera_position[0] !== 0) xmlOutput += " camx=\"" + json.camera_position[0] + "\"";
-	if (json.camera_position[1] !== 0) xmlOutput += " camy=\"" + json.camera_position[1] + "\"";
-	if (json.sing_duration !== 4) xmlOutput += " holdTime=\"" + json.sing_duration + "\"";
-	if (json.scale !== 1) xmlOutput += " scale=\"" + json.scale + "\"";
+	if (json.position[0] !== 0)			xmlOutput += ` x="${json.position[0]}"`;
+	if (json.position[1] !== 0)			xmlOutput += ` y="${json.position[1]}"`;
+	if (json.healthicon != null)		xmlOutput += ` icon="${json.healthicon}"`;
+	if (json.flip_x)					xmlOutput += ` flipX="true"`;
+	if (json.healthbar_colors != null)	xmlOutput += ` color="${convertRGBArrayToHex(json.healthbar_colors)}"`;
+	if (json.camera_position[0] !== 0)	xmlOutput += ` camx="${json.camera_position[0]}"`;
+	if (json.camera_position[1] !== 0)	xmlOutput += ` camy="${json.camera_position[1]}"`;
+	if (json.sing_duration !== 4)		xmlOutput += ` holdTime="${json.sing_duration}"`;
+	if (json.scale !== 1)				xmlOutput += ` scale="${json.scale}"`;
 
 	xmlOutput += ">\n"
 
 	json.animations.forEach(function (a) {
-		xmlOutput += "\t<anim";
-		xmlOutput += " name=\"" + a.anim + "\"";
-		xmlOutput += " anim=\"" + a.name + "\"";
-		if (a.offsets[0] !== 0)     xmlOutput += " x=\"" + a.offsets[0] + "\"";
-		if (a.offsets[1] !== 0)     xmlOutput += " y=\"" + a.offsets[1] + "\"";
-		if (a.fps !== 24)           xmlOutput += " fps=\"" + a.fps + "\"";
-		if (a.loop)                 xmlOutput += " loop=\"true\"";
-		if (a.indices.length !== 0) xmlOutput += " indices=\"" + formatNumberRange(a.indices) + "\"";
+		xmlOutput += `\t<anim name="${a.anim}" anim="${a.name}"`;
+		if (a.offsets[0] !== 0)     xmlOutput += ` x="${a.offsets[0]}"`;
+		if (a.offsets[1] !== 0)     xmlOutput += ` y="${a.offsets[1]}"`;
+		if (a.fps !== 24)           xmlOutput += ` fps="${a.fps}"`;
+		if (a.loop)                 xmlOutput += ` loop="true"`;
+		if (a.indices.length !== 0) xmlOutput += ` indices="${formatNumberRange(a.indices)}"`;
 		xmlOutput += '/>\n'
 	});
 
