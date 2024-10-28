@@ -276,11 +276,16 @@ function convertRGBArrayToHex(color) {
 	return "#" + hex(color[0], 2) + hex(color[1], 2) + hex(color[2], 2);
 }
 
+function roundDecimal(number, decimals) {
+	var pow = Math.pow(10, decimals);
+	return Math.round(number * pow) / pow;
+}
+
 
 function convert(jsonInput) {
 	var json = JSON.parse(jsonInput);
 
-	var xmlOutput = "<!DOCTYPE codename-engine-character>\n\t<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->\n<character";
+	var xmlOutput = "<!DOCTYPE codename-engine-character>\n<!-- Made with WizardMantis's Character Converter on https://codename-engine.com/ -->\n<character";
 
 	if (json.no_antialiasing) xmlOutput += " antialiasing=\"false\"";
 	if (json.image != null) {
@@ -299,15 +304,19 @@ function convert(jsonInput) {
 	if (json.sing_duration !== 4)		xmlOutput += ` holdTime="${json.sing_duration}"`;
 	if (json.scale !== 1)				xmlOutput += ` scale="${json.scale}"`;
 
+	var scale = json.scale;
+
 	xmlOutput += ">\n"
 
 	json.animations.forEach(function (a) {
 		xmlOutput += `\t<anim name="${a.anim}" anim="${a.name}"`;
-		if (a.offsets[0] !== 0)     xmlOutput += ` x="${a.offsets[0]}"`;
-		if (a.offsets[1] !== 0)     xmlOutput += ` y="${a.offsets[1]}"`;
-		if (a.fps !== 24)           xmlOutput += ` fps="${a.fps}"`;
-		if (a.loop)                 xmlOutput += ` loop="true"`;
-		if (a.indices.length !== 0) xmlOutput += ` indices="${formatNumberRange(a.indices)}"`;
+		var xOffset = roundDecimal(a.offsets[0] / scale, 3);
+		var yOffset = roundDecimal(a.offsets[1] / scale, 3);
+		var needsOffset = xOffset !== 0 || yOffset !== 0;
+		if (needsOffset)			xmlOutput += ` x="${xOffset}" y="${yOffset}"`;
+		if (a.fps !== 24)			xmlOutput += ` fps="${a.fps}"`;
+		if (a.loop)					xmlOutput += ` loop="true"`;
+		if (a.indices.length !== 0)	xmlOutput += ` indices="${formatNumberRange(a.indices)}"`;
 		xmlOutput += '/>\n'
 	});
 
