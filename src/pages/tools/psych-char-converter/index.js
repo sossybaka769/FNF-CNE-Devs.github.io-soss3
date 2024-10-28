@@ -85,7 +85,7 @@ function handleDrop(e) {
 var lastFile = null;
 
 //fileInput.addEventListener('change', function() {
-//	const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file chosen';
+//	var fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'No file chosen';
 //	fileNameDisplay.textContent = fileName;
 //});
 
@@ -120,13 +120,13 @@ function handleFiles(files) {
 function formatNumberRange(numbers, separator = ",") {
 	if (numbers.length === 0) return "";
 
-	const result = [];
-	let i = 0;
+	var result = [];
+	var i = 0;
 
 	while (i < numbers.length) {
-		let start = numbers[i];
-		let end = start;
-		let direction = 0; // 0: no sequence, 1: increasing, -1: decreasing
+		var start = numbers[i];
+		var end = start;
+		var direction = 0; // 0: no sequence, 1: increasing, -1: decreasing
 
 		if (i + 1 < numbers.length) { // detect direction of sequence
 			if (numbers[i + 1] === end + 1) {
@@ -159,7 +159,7 @@ function formatNumberRange(numbers, separator = ",") {
 
 var convertFolderButton = document.getElementById("convert-folder");
 convertFolderButton.addEventListener("change", function cFolder() {
-	const files = convertFolderButton.files;
+	var files = convertFolderButton.files;
 
 	var promises = [];
 
@@ -177,12 +177,12 @@ convertFolderButton.addEventListener("change", function cFolder() {
 
 	var zip = new JSZip();
 
-	const currDate = new Date();
-	const dateWithOffset = new Date(currDate.getTime() - currDate.getTimezoneOffset() * 60000);
+	var currDate = new Date();
+	var dateWithOffset = new Date(currDate.getTime() - currDate.getTimezoneOffset() * 60000);
 	JSZip.defaults.date = dateWithOffset;
 
-	for (let i = 0; i < files.length; i++) {
-		const file = files[i];
+	for (var i = 0; i < files.length; i++) {
+		var file = files[i];
 
 		if (file.name.includes('.json')) {
 			promises.push(conve(file));
@@ -197,7 +197,7 @@ convertFolderButton.addEventListener("change", function cFolder() {
 });
 
 function std_parseInt() {
-	let v = parseInt(x);
+	var v = parseInt(x);
 	if(isNaN(v)) {
 		return null;
 	}
