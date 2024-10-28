@@ -24,16 +24,15 @@ saveButton.addEventListener("click", function (e) {
 
 function saveFile(content, filename) {
 	var blob = new Blob([content], { type: "text/plain;charset=utf-8" });
-	var link = document.createElement("a");
-	link.href = URL.createObjectURL(blob);
-	link.download = filename;
-	document.body.appendChild(link);
-	link.click();
-	document.body.removeChild(link);
+	_saveFileBlob(blob, filename);
 }
 
 function saveBinaryFile(content, filename) {
 	var blob = new Blob([content], { type: "application/octet-stream" });
+	_saveFileBlob(blob, filename);
+}
+
+function _saveFileBlob(blob, filename) {
 	var link = document.createElement("a");
 	link.href = URL.createObjectURL(blob);
 	link.download = filename;
@@ -158,7 +157,7 @@ function formatNumberRange(numbers, separator = ",") {
 }
 
 var convertFolderButton = document.getElementById("convert-folder");
-convertFolderButton.addEventListener("change", function cFolder() {
+convertFolderButton.addEventListener("change", () => {
 	var files = convertFolderButton.files;
 
 	var promises = [];
@@ -189,7 +188,7 @@ convertFolderButton.addEventListener("change", function cFolder() {
 		}
 	}
 
-	Promise.all(promises).then((values) => {
+	Promise.all(promises).then(() => {
 		zip.generateAsync({type:"blob"}).then(function(content) {
 			saveBinaryFile(content, "characters.zip");
 		});
