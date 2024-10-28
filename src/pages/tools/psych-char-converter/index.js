@@ -273,7 +273,7 @@ function toWebColor(color, Alpha=true, Prefix=true) {
 }
 
 function convertRGBArrayToHex(color) {
-	return "#" + hex(color[0], 2) + hex(color[1], 2) + hex(color[2], 2);
+	return "#" + hex(color[0] & 0xFF, 2) + hex(color[1] & 0xFF, 2) + hex(color[2] & 0xFF, 2);
 }
 
 function roundDecimal(number, decimals) {
