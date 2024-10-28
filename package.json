@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "clean-css": "^5.3.3",
-    "sass": "^1.80.1",
+    "sass": "^1.80.4",
     "uglify-js": "^3.19.3"
   }
 }
